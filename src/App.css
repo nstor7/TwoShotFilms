@@ -1,0 +1,151 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Tipografía global */
+body {
+  font-family: 'Arial', sans-serif;
+  line-height: 1.6;
+  color: #2d2d2d;
+  background: #fff;
+  font-size: 16px;
+}
+
+/* Colores globales como variables */
+:root {
+  --primary-text: #2d2d2d;
+  --secondary-text: #666;
+  --border-color: #e5e5e5;
+  --bg-light: #f8f8f8;
+  --bg-dark: #2d2d2d;
+  --hover-dark: #666;
+}
+
+/* Tipografía común */
+h1, h2 {
+  font-weight: 400;
+  text-transform: uppercase;
+  color: var(--primary-text);
+}
+
+h1 {
+  font-size: 1.8rem;
+}
+
+h2 {
+  font-size: 1.8rem;
+}
+
+h3 {
+  font-size: 1.2rem;
+  font-weight: 300;
+  color: var(--secondary-text);
+}
+
+p {
+  font-size: 0.9rem;
+  font-weight: 300;
+  color: var(--secondary-text);
+}
+
+/* Botón común */
+.btn {
+  display: inline-block;
+  padding: 0.8rem 1.5rem;
+  background: var(--bg-dark);
+  color: #fff;
+  text-decoration: none;
+  border: none;
+  border-radius: 0;
+  font-size: 0.9rem;
+  font-weight: 400;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.btn:hover {
+  background: var(--hover-dark);
+}
+
+.btn-outline {
+  background: transparent;
+  color: var(--primary-text);
+  border: 1px solid var(--primary-text);
+}
+
+.btn-outline:hover {
+  background: var(--primary-text);
+  color: #fff;
+}
+
+/* Sección Hero común */
+.hero {
+  height: 60vh; /* Altura por defecto */
+  background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('https://source.unsplash.com/random/1920x1080/?video') no-repeat center/cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #fff;
+}
+
+.hero.slim {
+  height: 40vh; /* Variación más delgada para portafolio */
+}
+
+.hero-content h1 {
+  margin-bottom: 1rem;
+}
+
+.hero-content p {
+  margin-bottom: 1.5rem;
+  color: #fff;
+}
+
+/* Tarjeta común (para servicios y portafolio) */
+.card {
+  padding: 1.5rem;
+  background: #fff;
+  border: 1px solid var(--border-color);
+  text-align: left;
+}
+
+/* Media Queries globales */
+@media (min-width: 768px) {
+  h1 {
+      font-size: 2.5rem;
+  }
+
+  h2 {
+      font-size: 2.5rem;
+  }
+
+  h3 {
+      font-size: 1.5rem;
+  }
+
+  p {
+      font-size: 1rem;
+  }
+
+  .btn {
+      padding: 1rem 2rem;
+      font-size: 1rem;
+  }
+
+  .hero {
+      height: 80vh;
+  }
+
+  .hero.slim {
+      height: 50vh;
+  }
+
+  .card {
+      padding: 2rem;
+  }
+}
