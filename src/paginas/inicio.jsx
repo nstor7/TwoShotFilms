@@ -15,8 +15,8 @@ const Inicio = () => {
       <section className="hero">
         <div className="hero-content">
           <h1>[Tu Productora]</h1>
-          <p>Producción audiovisual profesional en Panamá</p>
-          <Link to="/servicios" className="btn-outline">Explora Nuestros Servicios</Link>
+          <p>Transformamos tus ideas en historias cinematográficas</p>
+          <Link to="/#contacto" className="btn">Cotiza tu Video</Link>
         </div>
       </section>
 

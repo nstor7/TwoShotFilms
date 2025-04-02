@@ -19,7 +19,7 @@ const Header = () => {
   // Escucha el evento de scroll y actualiza el estado
   useEffect(() => {
     const handleScroll = () => {
-      const scrolled = window.scrollY > 50; // Cambia a blanco después de 50px de scroll
+      const scrolled = window.scrollY > 200; // Cambia a blanco después de 50px de scroll
       setIsScrolled(scrolled);
     };
 
@@ -29,7 +29,7 @@ const Header = () => {
 
   return (
     <header className={`${styles.header} ${isScrolled ? styles.scrolled : ''}`}>
-      <div className={styles.logo}>[Tu Productora]</div>
+      <div className={styles.logo}><img className={styles.logo} src="/images/Two Shot Films - logo.png" alt="" /></div>
       <nav className={styles.nav}>
         <ul className={styles.navList}>
           <li><NavLink to="/" className={styles.navLink} >Inicio</NavLink></li>

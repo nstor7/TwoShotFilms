@@ -8,20 +8,13 @@
 }
 
 .scrolled {
-  background: #fff;
+  background: #1e1e1e;
   border-bottom: 1px solid var(--border-color);
 }
 
 .logo {
-  color: #fff;
-  font-size: 1.2rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  transition: color 0.3s ease;
-}
-
-.scrolled .logo {
-  color: var(--primary-text);
+  height: auto;
+  width: 20vw;
 }
 
 .nav {
@@ -38,9 +31,6 @@
   transition: color 0.3s ease;
 }
 
-.scrolled .navLink {
-  color: var(--primary-text);
-}
 
 .active {
   color: #ccc;
@@ -52,15 +42,14 @@
 
 @media (min-width: 768px) {
   .header {
-      padding: 1.5rem 2rem;
+      padding: 0.5rem 2rem;
       display: flex;
       justify-content: space-between;
       align-items: center;
   }
 
   .logo {
-      font-size: 1.5rem;
-      text-align: left;
+    width: 6vw;
   }
 
   .nav {
