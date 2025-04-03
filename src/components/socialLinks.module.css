@@ -6,11 +6,10 @@
 }
 
 .socialIcon {
-  font-size: 1.5rem; /* Tamaño base de los íconos */
-  color: var(--primary-text); /* Usa color del App.css */
+  font-size: 1rem; /* Tamaño base de los íconos */
+  color: white; /* Usa color del App.css */
   transition: color 0.3s ease;
 }
-
 .socialIcon:hover {
   color: var(--hover-dark); /* Cambio sutil al pasar el mouse */
 }
@@ -21,6 +20,6 @@
   }
 
   .socialIcon {
-      font-size: 2rem; /* Íconos más grandes en desktop */
+      font-size: 1rem; /* Íconos más grandes en desktop */
   }
 }

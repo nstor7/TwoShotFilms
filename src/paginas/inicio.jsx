@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom';
 import servicios from '../DB/servicios.js'; // Array de servicios
 import Trabajos from '../DB/trabajos.js'; // Array de trabajos
 // import ServiceForm from './ServiceForm'; // Formulario reutilizable
-import styles from './index.module.css';
+import styles from './inicio.module.css';
 import SocialLinks from '../components/SocialLinks.jsx';
 
 const Inicio = () => {
@@ -12,10 +12,10 @@ const Inicio = () => {
   return (
     <main className={styles.homePage}>
       {/* Hero Section */}
-      <section className="hero">
+      <section className={`hero ${styles.hero}`}>
         <div className="hero-content">
-          <h1>[Tu Productora]</h1>
-          <p>Transformamos tus ideas en historias cinematográficas</p>
+          <h1>Two Shot Films</h1>
+          <p className='SubTitulo'>Transformamos tus ideas en historias cinematográficas</p>
           <Link to="/#contacto" className="btn">Cotiza tu Video</Link>
         </div>
       </section>
@@ -77,7 +77,6 @@ const Inicio = () => {
       <section className={styles.contactSection}>
         <h2>Contáctanos</h2>
         {/* <ServiceForm /> */}
-        <SocialLinks/>
       </section>
     </main>
   );

@@ -1,0 +1,111 @@
+.servicesList {
+  padding: 2rem 1rem;
+  text-align: center;
+}
+
+.servicesList h2 {
+  font-size: 1.8rem;
+  font-weight: 400;
+  text-transform: uppercase;
+  margin-bottom: 2rem;
+}
+
+.servicesContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.serviceCard {
+  padding: 1.5rem;
+  background: #fff;
+  border: 1px solid #e5e5e5;
+  text-align: left;
+}
+
+.serviceCard h3 {
+  font-size: 1.2rem;
+  font-weight: 400;
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
+  color: #2d2d2d;
+}
+
+.serviceCard p {
+  font-size: 0.9rem;
+  font-weight: 300;
+  margin-bottom: 1rem;
+  color: #666;
+}
+
+.serviceCard .price {
+  font-family: Parrafo;
+  font-size: 0.9rem;
+  color: #2d2d2d;
+}
+
+/* Contacto */
+.contact {
+  padding: 2rem 1rem;
+  text-align: center;
+  background: #f8f8f8;
+}
+
+.contact h2 {
+  font-size: 1.8rem;
+  font-weight: 400;
+  text-transform: uppercase;
+  margin-bottom: 1.5rem;
+}
+
+
+
+
+/* Media Queries para pantallas más grandes */
+@media (min-width: 768px) {
+  /* Servicios */
+  .servicesList {
+      padding: 4rem 2rem;
+  }
+
+  .servicesList h2 {
+      font-size: 2.5rem;
+  }
+
+  .servicesContainer {
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: center;
+      max-width: 1200px;
+      margin: 0 auto;
+  }
+
+  .serviceCard {
+      width: 45%;
+      margin: 1%;
+  }
+
+  .serviceCard h3 {
+      font-size: 1.5rem;
+  }
+
+  .serviceCard p {
+      font-size: 1rem;
+  }
+
+  /* Contacto */
+  
+
+  /* Footer */
+  footer {
+      padding: 2rem;
+      font-size: 1rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .serviceCard {
+      width: 30%;
+      margin: 1.5%;
+  }
+}

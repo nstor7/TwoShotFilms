@@ -6,16 +6,25 @@
 }
 
 /* Tipografía global */
-body {
-  font-family: 'Arial', sans-serif;
-  line-height: 1.6;
-  color: #2d2d2d;
-  background: #fff;
-  font-size: 16px;
+@font-face{
+  font-family: Titulo;
+  src: local('Morganite-Bold'), url('./assets/fonts/Morganite-Bold.ttf');
+  font-style: bold;
+  font-weight: bold;
 }
-
+@font-face{
+  font-family: SubTitulo;
+  src: local('Aileron-Light'), url('./assets/fonts/Aileron-Light.otf');
+}
+@font-face{
+  font-family: Parrafo;
+  src: local('Aileron-Regular'), url('./assets/fonts/Aileron-Regular.otf');
+}
 /* Colores globales como variables */
 :root {
+  --titulos-negativo: #fff;
+  --titulo-positivo: #111;
+  --subtitulo-negativo: #9d9d9d;
   --primary-text: #2d2d2d;
   --secondary-text: #666;
   --border-color: #e5e5e5;
@@ -25,29 +34,31 @@ body {
 }
 
 /* Tipografía común */
-h1, h2 {
-  font-weight: 400;
-  text-transform: uppercase;
-  color: var(--primary-text);
+h1, h2{
+  font-family: Titulo;
+  color: var(--titulo-positivo);
+  font-size: 4rem;
+  line-height: 4rem;
+  padding: 0;
+  margin: 0;
 }
 
-h1 {
-  font-size: 1.8rem;
-}
-
-h2 {
-  font-size: 1.8rem;
+.SubTitulo{
+  font-family: SubTitulo;
+  font-size: 1.2rem;
+  letter-spacing: 0.3rem;
+  color: var(--subtitulo-positivo)  
 }
 
 h3 {
-  font-size: 1.2rem;
-  font-weight: 300;
-  color: var(--secondary-text);
+  font-family: Titulo;
+  font-size: 4rem;
+  color: #3d3d3d;
 }
 
 p {
-  font-size: 0.9rem;
-  font-weight: 300;
+  font-family: Parrafo;
+  font-size: 1rem;
   color: var(--secondary-text);
 }
 
@@ -60,11 +71,12 @@ p {
   text-decoration: none;
   border: none;
   border-radius: 0;
-  font-size: 0.9rem;
-  font-weight: 400;
+  font-size: 0.8rem;
   text-transform: uppercase;
   cursor: pointer;
   transition: background 0.3s ease;
+  font-family: Parrafo;
+  letter-spacing: 0.1rem;
 }
 
 .btn:hover {
@@ -84,26 +96,31 @@ p {
 
 /* Sección Hero común */
 .hero {
-  height: 60vh; /* Altura por defecto */
-  background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('https://source.unsplash.com/random/1920x1080/?video') no-repeat center/cover;
+  height: 80vh; /* Altura por defecto */
   display: flex;
-  align-items: center;
+  align-items: flex-end;
   justify-content: center;
   text-align: center;
   color: #fff;
+  
 }
 
 .hero.slim {
   height: 40vh; /* Variación más delgada para portafolio */
 }
-
-.hero-content h1 {
-  margin-bottom: 1rem;
+.hero-content{
+  width: 100%;
+  height: 100%;
+  padding: 50vh 0 0 0;
+  background: linear-gradient(rgba(0, 0, 0, 0.7)0% 10%, rgba(0, 0, 0, 0)25% 50%, rgba(0, 0, 0, 0.5)) ;
+  align-items: end;
 }
 
 .hero-content p {
+  padding-top: 0.5rem;
   margin-bottom: 1.5rem;
-  color: #fff;
+  color: var(--subtitulo-negativo);
+
 }
 
 /* Tarjeta común (para servicios y portafolio) */
@@ -114,10 +131,37 @@ p {
   text-align: left;
 }
 
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-width: 100%;
+  padding: 0 1rem;
+}
+
+input {
+  padding: 0.8rem;
+  border: 1px solid #e5e5e5;
+  background: #fff;
+  font-size: 0.9rem;
+  color: #2d2d2d;
+}
+
+.contact p {
+  font-size: 0.9rem;
+  font-weight: 300;
+  margin-top: 1rem;
+}
+
+.contact a {
+  color: #2d2d2d;
+  text-decoration: underline;
+}
+
 /* Media Queries globales */
 @media (min-width: 768px) {
   h1 {
-      font-size: 2.5rem;
+      font-size: 8rem;
   }
 
   h2 {
@@ -125,7 +169,8 @@ p {
   }
 
   h3 {
-      font-size: 1.5rem;
+      font-size: 2rem;
+      letter-spacing: 0.05rem;
   }
 
   p {
@@ -138,7 +183,7 @@ p {
   }
 
   .hero {
-      height: 80vh;
+      height: 90vh;
   }
 
   .hero.slim {
@@ -148,4 +193,33 @@ p {
   .card {
       padding: 2rem;
   }
+  .hero{
+    background-attachment: fixed;
+  }
+  .hero-content{
+    padding-top: 60vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.7)0% 3%, rgba(0, 0, 0, 0)25% 50%, rgba(0, 0, 0, 0.5)) ;
+
+  }
+  .contact {
+    padding: 4rem 2rem;
+}
+
+.contact h2 {
+    font-size: 2.5rem;
+}
+
+form {
+    max-width: 600px;
+    padding: 0;
+}
+
+input {
+    padding: 1rem;
+    font-size: 1rem;
+}
+
+.contact p {
+    font-size: 1rem;
+}
 }

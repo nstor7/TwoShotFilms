@@ -1,6 +1,6 @@
 import { useParams } from 'react-router'
 import Servicios from '../DB/servicios.js';
-import './servicio.css';
+import style from './servicio.module.css';
 
 
 const Servicio = () => {
@@ -8,7 +8,7 @@ const Servicio = () => {
     var servicio = Servicios.find(servicio => servicio.id === id)
   return (
     <>
-        <div key={servicio.id} className="service-section">
+        <div key={servicio.id} className={style.serviceSection}>
           <section className="hero">
             <div className="hero-content">
               <h1>{servicio.h1}</h1>
@@ -17,11 +17,11 @@ const Servicio = () => {
             </div>
           </section>
 
-          <section className="benefits">
+          <section className={style.benefits}>
             <h2>¿Por Qué Elegirnos?</h2>
-            <div className="benefits-container">
+            <div className={style.benefitsContainer}>
               {servicio.porQueElegirnos.map((beneficio, index) => (
-                <div key={index} className="benefit-item">
+                <div key={index} className={style.benefitItem}>
                   <h3>{beneficio.titulo}</h3>
                   <p>{beneficio.descripcion}</p>
                 </div>
@@ -29,11 +29,11 @@ const Servicio = () => {
             </div>
           </section>
 
-          <section className="packages">
+          <section className={style.packages}>
             <h2>Nuestros Paquetes</h2>
-            <div className="packages-container">
+            <div className={style.packagesContainer}>
               {servicio.paquetes.map((paquete, index) => (
-                <div key={index} className="package-card">
+                <div key={index} className={style.packageCard}>
                   <h3>{paquete.nombre} - ${paquete.precio}</h3>
                   <ul>
                     {paquete.detalles.map((detalle, i) => (
@@ -46,11 +46,11 @@ const Servicio = () => {
             </div>
           </section>
 
-          <section className="portfolio">
+          <section className={style.portfolio}>
             <h2>Muestras de Nuestro Trabajo</h2>
-            <div className="portfolio-container">
+            <div className={style.portfolioContainer}>
               {servicio.muestras.map((muestra, index) => (
-                <div key={index} className="portfolio-item">
+                <div key={index} className={style.portfolioItem}>
                   {muestra.tipo === "video" ? (
                     <video controls>
                       <source src={muestra.src} type="video/mp4" />
@@ -65,11 +65,11 @@ const Servicio = () => {
             </div>
           </section>
 
-          <section className="testimonials">
+          <section className={style.testimonials}>
             <h2>Lo Que Dicen Nuestros Clientes</h2>
-            <div className="testimonials-container">
+            <div className={style.testimonialsContainer}>
               {servicio.testimonios.map((testimonio, index) => (
-                <div key={index} className="testimonial-item">
+                <div key={index} className={style.testimonialItem}>
                   <p>"{testimonio.texto}"</p>
                   <h4>– {testimonio.autor}</h4>
                 </div>
@@ -77,11 +77,11 @@ const Servicio = () => {
             </div>
           </section>
 
-          <section className="process">
+          <section className={style.process}>
             <h2>Nuestro Proceso es Simple</h2>
             <div className="process-container">
               {servicio.proceso.map((paso, index) => (
-                <div key={index} className="process-item">
+                <div key={index} className={style.processItem}>
                   <h3>{paso.paso}</h3>
                   <p>{paso.descripcion}</p>
                 </div>
@@ -89,13 +89,13 @@ const Servicio = () => {
             </div>
           </section>
 
-          <section className="upsell">
+          <section className={style.upsell}>
             <h2>{servicio.upsell.h2}</h2>
             <p>{servicio.upsell.texto}</p>
             <a href="#" className="btn">{servicio.upsell.cta}</a>
           </section>
 
-          <section id="contacto" className="contact">
+          <section id="contacto" className={style.contact}>
             <h2>Contáctanos Hoy</h2>
             <form>
               <input type="text" placeholder="Nombre" required />

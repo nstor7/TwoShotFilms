@@ -1,5 +1,5 @@
 import servicios from '../DB/servicios.js';
-import './servicios.css';
+import style from './servicios.module.css';
 
 const Servicios = () => {
   return (
@@ -11,20 +11,20 @@ const Servicios = () => {
             <a href="#servicios" class="btn">Explora Nuestros Servicios</a>
         </div>
     </section>
-      <section id="servicios" className="services-list">
+      <section id="servicios" className={style.servicesList}>
         <h2>Nuestros Servicios</h2>
-        <div className="services-container">
+        <div className={style.servicesContainer}>
           {servicios.map(servicio => (
-            <div key={servicio.id} className="service-card">
+            <div key={servicio.id} className={style.serviceCard}>
               <h3>{servicio.h1}</h3>
               <p>{servicio.subtitulo}</p>
-              <p className="price">Desde ${servicio.paquetes[0].precio}</p>
+              <p className={style.price}>Desde ${servicio.paquetes[0].precio}</p>
               <a href={`/servicios/${servicio.id}`} className="btn">Ver Detalles</a>
             </div>
           ))}
         </div>
       </section>
-      <section id="contacto" className="contact">
+      <section id="contacto" className={style.contact}>
         <h2>Contáctanos Hoy</h2>
         <form>
             <input type="text" placeholder="Nombre" required/>

@@ -4,12 +4,11 @@
   background: transparent;
   padding: 1rem;
   z-index: 1000;
-  transition: background-color 0.3s ease;
+  transition: background-color 0.7s ease;
 }
 
 .scrolled {
   background: #1e1e1e;
-  border-bottom: 1px solid var(--border-color);
 }
 
 .logo {
@@ -29,6 +28,8 @@
   color: #fff;
   text-decoration: none;
   transition: color 0.3s ease;
+  font-family: Parrafo;
+  font-size: 0.9rem;
 }
 
 
@@ -42,7 +43,7 @@
 
 @media (min-width: 768px) {
   .header {
-      padding: 0.5rem 2rem;
+      padding: 0.5rem 4rem;
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -58,7 +59,7 @@
 
   .navList {
       display: flex;
-      gap: 2rem;
+      gap: 4rem;
   }
 
   .navLink:hover {

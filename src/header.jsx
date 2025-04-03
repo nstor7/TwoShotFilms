@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { NavLink } from 'react-router-dom';
 import servicios from './DB/servicios';
 import styles from './header.module.css';
+import Social from './components/SocialLinks'
 // {servicios.map(servicio => (
 //   <li key={servicio.id}>
 //     <NavLink
@@ -38,6 +39,7 @@ const Header = () => {
           <li><NavLink to="/portfolio" className={styles.navLink} >Portfolio</NavLink></li>
         </ul>
       </nav>
+      <Social />
     </header>
   );
 };

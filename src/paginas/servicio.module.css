@@ -1,60 +1,3 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Arial', sans-serif; /* Cambia a una fuente premium como Aperçu si tienes acceso */
-}
-
-body {
-  line-height: 1.6;
-  color: #2d2d2d;
-  background: #fff;
-  font-size: 16px;
-}
-
-/* Hero */
-.hero {
-  height: 60vh;
-  background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('https://source.unsplash.com/random/1920x1080/?video') no-repeat center/cover;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  color: #fff;
-}
-
-.hero-content h1 {
-  font-size: 1.8rem;
-  font-weight: 400;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-  margin-bottom: 1rem;
-}
-
-.hero-content p {
-  font-size: 1rem;
-  font-weight: 300;
-  margin-bottom: 1.5rem;
-}
-
-.btn {
-  display: inline-block;
-  padding: 0.8rem 1.5rem;
-  background: transparent;
-  color: #2d2d2d;
-  text-decoration: none;
-  border: 1px solid #2d2d2d;
-  border-radius: 0;
-  font-size: 0.9rem;
-  font-weight: 400;
-  text-transform: uppercase;
-  transition: all 0.3s ease;
-}
-
-.btn:hover {
-  background: #2d2d2d;
-  color: #fff;
-}
 
 /* Beneficios */
 .benefits {
@@ -69,13 +12,13 @@ body {
   margin-bottom: 2rem;
 }
 
-.benefits-container {
+.benefitsContainer {
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
 }
 
-.benefit-item h3 {
+.benefitItem h3 {
   font-size: 1.2rem;
   font-weight: 400;
   text-transform: uppercase;
@@ -83,7 +26,7 @@ body {
   color: #2d2d2d;
 }
 
-.benefit-item p {
+.benefitItem p {
   font-size: 0.9rem;
   font-weight: 300;
   color: #666;
@@ -103,19 +46,19 @@ body {
   margin-bottom: 2rem;
 }
 
-.packages-container {
+.packagesContainer {
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
 }
 
-.package-card {
+.packageCard {
   padding: 1.5rem;
   background: #fff;
   border: 1px solid #e5e5e5;
 }
 
-.package-card h3 {
+.packageCard h3 {
   font-size: 1.2rem;
   font-weight: 400;
   text-transform: uppercase;
@@ -123,7 +66,7 @@ body {
   color: #2d2d2d;
 }
 
-.package-card ul {
+.packageCard ul {
   list-style: none;
   font-size: 0.9rem;
   font-weight: 300;
@@ -131,11 +74,11 @@ body {
   margin-bottom: 1rem;
 }
 
-.package-card ul li {
+.packageCard ul li {
   margin-bottom: 0.5rem;
 }
 
-.package-card .btn {
+.packageCard .btn {
   margin-top: 1rem;
 }
 
@@ -152,18 +95,18 @@ body {
   margin-bottom: 2rem;
 }
 
-.portfolio-container {
+.portfolioContainer {
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
 }
 
-.portfolio-item video, .portfolio-item img {
+.portfolioItem video, .portfolioItem img {
   width: 100%;
   border: 1px solid #e5e5e5;
 }
 
-.portfolio-item p {
+.portfolioItem p {
   font-size: 0.9rem;
   font-weight: 300;
   color: #666;
@@ -190,19 +133,19 @@ body {
   gap: 1.5rem;
 }
 
-.testimonial-item {
+.testimonialItem {
   padding: 1.5rem;
   background: #fff;
   border: 1px solid #e5e5e5;
 }
 
-.testimonial-item p {
+.testimonialItem p {
   font-size: 0.9rem;
   font-weight: 300;
   color: #666;
 }
 
-.testimonial-item h4 {
+.testimonialItem h4 {
   font-size: 1rem;
   font-weight: 400;
   margin-top: 1rem;
@@ -222,13 +165,13 @@ body {
   margin-bottom: 2rem;
 }
 
-.process-container {
+.processContainer {
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
 }
 
-.process-item h3 {
+.processItem h3 {
   font-size: 1.2rem;
   font-weight: 400;
   text-transform: uppercase;
@@ -236,7 +179,7 @@ body {
   color: #2d2d2d;
 }
 
-.process-item p {
+.processItem p {
   font-size: 0.9rem;
   font-weight: 300;
   color: #666;
@@ -286,52 +229,10 @@ body {
   margin-bottom: 1.5rem;
 }
 
-form {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-  max-width: 100%;
-  padding: 0 1rem;
-}
 
-input, select {
-  padding: 0.8rem;
-  border: 1px solid #e5e5e5;
-  background: #fff;
-  font-size: 0.9rem;
-  color: #2d2d2d;
-}
-
-.contact p {
-  font-size: 0.9rem;
-  font-weight: 300;
-  margin-top: 1rem;
-}
-
-.contact a {
-  color: #2d2d2d;
-  text-decoration: underline;
-}
 
 /* Media Queries para pantallas más grandes */
 @media (min-width: 768px) {
-  /* Hero */
-  .hero {
-      height: 80vh;
-  }
-
-  .hero-content h1 {
-      font-size: 2.5rem;
-  }
-
-  .hero-content p {
-      font-size: 1.2rem;
-  }
-
-  .btn {
-      padding: 1rem 2rem;
-      font-size: 1rem;
-  }
 
   /* Beneficios */
   .benefits {
@@ -342,17 +243,17 @@ input, select {
       font-size: 2.5rem;
   }
 
-  .benefits-container {
+  .benefitsContainer {
       flex-direction: row;
       max-width: 1200px;
       margin: 0 auto;
   }
 
-  .benefit-item h3 {
+  .benefitItem h3 {
       font-size: 1.5rem;
   }
 
-  .benefit-item p {
+  .benefitItem p {
       font-size: 1rem;
   }
 
@@ -365,17 +266,17 @@ input, select {
       font-size: 2.5rem;
   }
 
-  .packages-container {
+  .packagesContainer {
       flex-direction: row;
       max-width: 1200px;
       margin: 0 auto;
   }
 
-  .package-card h3 {
+  .packageCard h3 {
       font-size: 1.5rem;
   }
 
-  .package-card ul {
+  .packageCard ul {
       font-size: 1rem;
   }
 
@@ -388,7 +289,7 @@ input, select {
       font-size: 2.5rem;
   }
 
-  .portfolio-container {
+  .portfolioContainer {
       flex-direction: row;
       max-width: 1200px;
       margin: 0 auto;
@@ -403,17 +304,17 @@ input, select {
       font-size: 2.5rem;
   }
 
-  .testimonials-container {
+  .testimonialsContainer {
       flex-direction: row;
       max-width: 1200px;
       margin: 0 auto;
   }
 
-  .testimonial-item p {
+  .testimonialItem p {
       font-size: 1rem;
   }
 
-  .testimonial-item h4 {
+  .testimonialItem h4 {
       font-size: 1.1rem;
   }
 
@@ -426,17 +327,17 @@ input, select {
       font-size: 2.5rem;
   }
 
-  .process-container {
+  .processContainer {
       flex-direction: row;
       max-width: 1200px;
       margin: 0 auto;
   }
 
-  .process-item h3 {
+  .processItem h3 {
       font-size: 1.5rem;
   }
 
-  .process-item p {
+  .processItem p {
       font-size: 1rem;
   }
 
@@ -460,19 +361,5 @@ input, select {
 
   .contact h2 {
       font-size: 2.5rem;
-  }
-
-  form {
-      max-width: 600px;
-      padding: 0;
-  }
-
-  input, select {
-      padding: 1rem;
-      font-size: 1rem;
-  }
-
-  .contact p {
-      font-size: 1rem;
   }
 }
