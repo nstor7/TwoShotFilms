@@ -16,7 +16,7 @@ const Inicio = () => {
         <div className="hero-content">
           <h1>Two Shot Films</h1>
           <p className='SubTitulo'>Transformamos tus ideas en historias cinematográficas</p>
-          <Link to="/#contacto" className="btn">Cotiza tu Video</Link>
+          <Link to="/#contacto" className='btn btnNegativo'>Cotiza tu Video</Link>
         </div>
       </section>
 
@@ -35,7 +35,7 @@ const Inicio = () => {
             </Link>
           ))}
         </div>
-        <Link to="/servicios" className="btn">Ver Todos los Servicios</Link>
+        <Link to="/servicios" className="btn btnPositivo">Ver Todos los Servicios</Link>
       </section>
 
       {/* Portafolio */}
@@ -70,7 +70,7 @@ const Inicio = () => {
             </div>
           ))}
         </div>
-        <Link to="/portafolio" className="btn">Explora Nuestro Portafolio</Link>
+        <Link to="/portafolio" className="btn btnPositivo">Explora Nuestro Portafolio</Link>
       </section>
 
       {/* Formulario de Contacto */}

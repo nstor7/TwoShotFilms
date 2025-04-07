@@ -7,11 +7,17 @@
   color: var(--titulo-negativo);
 }
 .hero p{
-  color: var(--subtitulo-negativo);
+  color: var(--titulo-negativo-secundario);
 }
+
 .servicesSection {
   padding: 2rem 1rem;
   text-align: center;
+  background:var(--fondo-negativo);
+
+}
+.servicesSection h2{
+  color: rgb(167, 163, 163);
 }
 
 .servicesGrid {
@@ -24,12 +30,14 @@
 
 .serviceCard {
   text-decoration: none;
-  color: inherit;
+  background: var(--fondo-negativo-secundario);
+  color: var(--titulo-negativo-secundario)
 }
 
 .portfolioSection {
   padding: 2rem 1rem;
-  background: var(--bg-light);
+  background: var(--fondo-negativo);
+  color: var(--titulo-negativo-secundario);
   text-align: center;
 }
 
@@ -68,7 +76,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background: var(--bg-light);
+  background: var(--fondo-negativo-secundario);
   border: 1px solid var(--border-color);
 }
 
