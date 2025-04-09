@@ -6,16 +6,19 @@ const PortfolioPage = () => {
   return (
     <main className={styles.portfolioPage}>
       <section className={`${styles.hero} hero slim`}>
-        <div className="hero-content">
+        <div className="hero-content slim-content">
           <h1>Portafolio</h1>
           <p>Nuestros trabajos más destacados</p>
         </div>
       </section>
-      <div className={styles.portfolioGrid}>
-        {Trabajos.map((trabajo, index) => (
-          <PortfolioItem key={index} trabajo={trabajo} />
-        ))}
-      </div>
+      <section className={styles.portfolio}>
+        <div className={styles.portfolioGrid}>
+          {Trabajos.map((trabajo, index) => (
+            <PortfolioItem key={index} trabajo={trabajo} />
+          ))}
+        </div>
+      </section>
+      
     </main>
   );
 };

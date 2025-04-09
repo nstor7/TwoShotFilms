@@ -8,7 +8,7 @@ const Servicios = () => {
         <div className="hero-content">
             <h1>Servicios Audiovisuales en Panamá</h1>
             <p>Desde cobertura de eventos hasta videos corporativos, ofrecemos soluciones profesionales para tus necesidades.</p>
-            <a href="#servicios" class="btn">Explora Nuestros Servicios</a>
+            <a href="#servicios" class="btn btnNegativo">Explora Nuestros Servicios</a>
         </div>
     </section>
       <section id="servicios" className={style.servicesList}>
@@ -19,7 +19,7 @@ const Servicios = () => {
               <h3>{servicio.h1}</h3>
               <p>{servicio.subtitulo}</p>
               <p className={style.price}>Desde ${servicio.paquetes[0].precio}</p>
-              <a href={`/servicios/${servicio.id}`} className="btn">Ver Detalles</a>
+              <a href={`/servicios/${servicio.id}`} className="btn btnPositivo">Ver Detalles</a>
             </div>
           ))}
         </div>

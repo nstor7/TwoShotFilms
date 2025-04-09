@@ -3,33 +3,36 @@
 .benefits {
   padding: 2rem 1rem;
   text-align: center;
+  background: var(--fondo-negativo);
+  border-bottom: 1px solid rgba(200, 200, 200, 0.2);
 }
 
 .benefits h2 {
   font-size: 1.8rem;
-  font-weight: 400;
   text-transform: uppercase;
   margin-bottom: 2rem;
+  color: var(--titulo-negativo);
 }
 
 .benefitsContainer {
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
+  gap: 6rem;
+  justify-content: center;
 }
 
 .benefitItem h3 {
   font-size: 1.2rem;
-  font-weight: 400;
   text-transform: uppercase;
   margin-bottom: 0.5rem;
   color: #2d2d2d;
+  color: var(--titulo-negativo);
 }
 
 .benefitItem p {
   font-size: 0.9rem;
-  font-weight: 300;
-  color: #666;
+  color: var(--titulo-negativo-secundario);
+
 }
 
 /* Paquetes */
@@ -37,6 +40,7 @@
   padding: 2rem 1rem;
   background: #f8f8f8;
   text-align: center;
+  background: var(--fondo-negativo);
 }
 
 .packages h2 {
@@ -44,17 +48,19 @@
   font-weight: 400;
   text-transform: uppercase;
   margin-bottom: 2rem;
+  color: var(--titulo-negativo);
 }
 
 .packagesContainer {
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
+  justify-content: center;
 }
 
 .packageCard {
   padding: 1.5rem;
-  background: #fff;
+  background: var(--fondo-negativo-secundario);
   border: 1px solid #e5e5e5;
 }
 
@@ -63,14 +69,14 @@
   font-weight: 400;
   text-transform: uppercase;
   margin-bottom: 0.5rem;
-  color: #2d2d2d;
+  color: var(--titulo-negativo);
 }
 
 .packageCard ul {
   list-style: none;
   font-size: 0.9rem;
   font-weight: 300;
-  color: #666;
+  color: var(--titulo-negativo-secundario);
   margin-bottom: 1rem;
 }
 
@@ -86,6 +92,7 @@
 .portfolio {
   padding: 2rem 1rem;
   text-align: center;
+  background: var(--fondo-positivo);
 }
 
 .portfolio h2 {
@@ -93,6 +100,7 @@
   font-weight: 400;
   text-transform: uppercase;
   margin-bottom: 2rem;
+  color: var(--titulo-positivo);
 }
 
 .portfolioContainer {
@@ -109,20 +117,20 @@
 .portfolioItem p {
   font-size: 0.9rem;
   font-weight: 300;
-  color: #666;
+  color: var(--titulo-negativo-secundario);
   margin-top: 0.5rem;
 }
 
 /* Testimonios */
 .testimonials {
   padding: 2rem 1rem;
-  background: #f8f8f8;
   text-align: center;
+  background: var(--fondo-negativo);
 }
 
 .testimonials h2 {
+  color: var(--titulo-negativo);
   font-size: 1.8rem;
-  font-weight: 400;
   text-transform: uppercase;
   margin-bottom: 2rem;
 }
@@ -131,38 +139,41 @@
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
+
+  
 }
 
 .testimonialItem {
   padding: 1.5rem;
-  background: #fff;
-  border: 1px solid #e5e5e5;
+  background: var(--fondo-negativo-secundario);
+  border: 1px solid var(--titulo-negativo-secundario);
 }
 
 .testimonialItem p {
   font-size: 0.9rem;
   font-weight: 300;
-  color: #666;
+  color: var(--titulo-negativo);
 }
 
 .testimonialItem h4 {
   font-size: 1rem;
   font-weight: 400;
   margin-top: 1rem;
-  color: #2d2d2d;
+  color: var(--titulo-negativo-secundario)
 }
 
 /* Proceso */
 .process {
   padding: 2rem 1rem;
   text-align: center;
+  background: var(--fondo-negativo);
 }
 
 .process h2 {
   font-size: 1.8rem;
-  font-weight: 400;
   text-transform: uppercase;
   margin-bottom: 2rem;
+  color: var(--titulo-negativo);
 }
 
 .processContainer {
@@ -173,22 +184,20 @@
 
 .processItem h3 {
   font-size: 1.2rem;
-  font-weight: 400;
   text-transform: uppercase;
-  margin-bottom: 0.5rem;
-  color: #2d2d2d;
+  margin-top: 2rem;
+  color: var(--titulo-negativo);
 }
 
 .processItem p {
   font-size: 0.9rem;
   font-weight: 300;
-  color: #666;
+  color: var(--titulo-negativo-secundario)
 }
 
 /* Upsell */
 .upsell {
   padding: 2rem 1rem;
-  background: #e5e5e5;
   text-align: center;
 }
 
@@ -202,29 +211,18 @@
 .upsell p {
   font-size: 1rem;
   font-weight: 300;
-  color: #666;
   margin-bottom: 1.5rem;
-}
-
-.upsell .btn {
-  background: #2d2d2d;
-  color: #fff;
-  border: none;
-}
-
-.upsell .btn:hover {
-  background: #666;
 }
 
 /* Contacto */
 .contact {
   padding: 2rem 1rem;
   text-align: center;
+  background: var(--fondo-gris);
 }
 
 .contact h2 {
   font-size: 1.8rem;
-  font-weight: 400;
   text-transform: uppercase;
   margin-bottom: 1.5rem;
 }

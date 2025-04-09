@@ -1,3 +1,9 @@
+.portfolioItem{
+  background: var(--fondo-negativo-secundario);
+}
+.portfolioItem p{
+  color: var(--titulo-negativo-secundario);
+}
 .media {
   position: relative;
   padding-bottom: 56.25%; /* 16:9 Aspect Ratio */

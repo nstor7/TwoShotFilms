@@ -34,6 +34,27 @@
   color: var(--titulo-negativo-secundario)
 }
 
+.descripcion{
+  padding: 8vw;
+}
+.descripcion h2{
+  justify-self: center;
+}
+.descripcion p{
+  letter-spacing: 0.1rem;
+  line-height: 1.2rem;
+  margin-bottom: 1rem;
+}
+.descripcion p :last-child{
+  margin-bottom: 0;
+}
+.descripcion ul{
+  font-family: Parrafo;
+  letter-spacing: 0.1rem;
+  line-height: 1.2rem;
+  margin-bottom: 1rem;
+  margin-left: 4rem;
+}
 .portfolioSection {
   padding: 2rem 1rem;
   background: var(--fondo-negativo);

@@ -1,11 +1,14 @@
-import { useParams } from 'react-router'
+import { Link, useParams } from 'react-router'
 import Servicios from '../DB/servicios.js';
 import style from './servicio.module.css';
+import PortfolioItem from '../components/portfolioItem.jsx';
+import Trabajos from '../DB/trabajos.js';
 
 
 const Servicio = () => {
     const { id } = useParams()
     var servicio = Servicios.find(servicio => servicio.id === id)
+    const featuredWorks = Trabajos.filter(Trabajo => Trabajo.Genero === servicio.Genero).slice(0, 3)
   return (
     <>
         <div key={servicio.id} className={style.serviceSection}>
@@ -13,7 +16,7 @@ const Servicio = () => {
             <div className="hero-content">
               <h1>{servicio.h1}</h1>
               <p>{servicio.subtitulo}</p>
-              <a href="#contacto" className="btn">Reserva tu Fecha</a>
+              <a href="#contacto" className="btn  btnNegativo">Reserva tu Fecha</a>
             </div>
           </section>
 
@@ -34,13 +37,13 @@ const Servicio = () => {
             <div className={style.packagesContainer}>
               {servicio.paquetes.map((paquete, index) => (
                 <div key={index} className={style.packageCard}>
-                  <h3>{paquete.nombre} - ${paquete.precio}</h3>
+                  <h3>{paquete.nombre} - Desde ${paquete.precio}</h3>
                   <ul>
                     {paquete.detalles.map((detalle, i) => (
                       <li key={i}>{detalle}</li>
                     ))}
                   </ul>
-                  <a href="#contacto" className="btn">Cotiza Ahora</a>
+                  <Link href="#contacto" className="btn btnPositivo">Cotiza Ahora</Link>
                 </div>
               ))}
             </div>
@@ -49,19 +52,9 @@ const Servicio = () => {
           <section className={style.portfolio}>
             <h2>Muestras de Nuestro Trabajo</h2>
             <div className={style.portfolioContainer}>
-              {servicio.muestras.map((muestra, index) => (
-                <div key={index} className={style.portfolioItem}>
-                  {muestra.tipo === "video" ? (
-                    <video controls>
-                      <source src={muestra.src} type="video/mp4" />
-                      {muestra.descripcion}
-                    </video>
-                  ) : (
-                    <img src={muestra.src} alt={muestra.descripcion} />
-                  )}
-                  <p>{muestra.descripcion}</p>
-                </div>
-              ))}
+            {featuredWorks.map((trabajo, index) => (
+            <PortfolioItem key={index} trabajo={trabajo} />
+          ))}
             </div>
           </section>
 
@@ -92,7 +85,7 @@ const Servicio = () => {
           <section className={style.upsell}>
             <h2>{servicio.upsell.h2}</h2>
             <p>{servicio.upsell.texto}</p>
-            <a href="#" className="btn">{servicio.upsell.cta}</a>
+            <a href="#" className="btn btnNegativo">{servicio.upsell.cta}</a>
           </section>
 
           <section id="contacto" className={style.contact}>

@@ -4,13 +4,13 @@ const servicios = [
     h1: "Cobertura Profesional para Eventos en Panamá",
     subtitulo: "Captura cada momento con videos y fotos de calidad, entrega en 48 horas.",
     paquetes: [
-      { nombre: "Paquete Básico", precio: 350, detalles: ["Video Highlight (1-2 min)", "10 Fotos Editadas", "Entrega en 48 horas"] },
-      { nombre: "Paquete Estándar", precio: 600, detalles: ["Video Completo (3-5 min)", "20 Fotos Editadas", "1 Reel para Redes (15-30 seg)", "Entrega en 72 horas"] },
+      { nombre: "Paquete Básico", precio: 350, detalles: ["Video Highlight (1-2 min horizontal)", "Reel para Redes (30-40 seg en vertical)", "Entrega en 48 horas"] },
+      { nombre: "Paquete Estándar", precio: 600, detalles: ["Video Highlight (3-5 min)", "2 Reel para Redes (30-40 seg)", "Entrega en 72 horas"] },
     ],
     porQueElegirnos: [
       { titulo: "Entrega Rápida", descripcion: "Recibe tu video y fotos en 48-72 horas." },
       { titulo: "Precios Accesibles", descripcion: "Calidad profesional desde solo $350." },
-      { titulo: "Videos y Fotos", descripcion: "Capturamos cada detalle con excelencia." },
+      { titulo: "Calidad Cinematográfica", descripcion: "Elegiremos planos, movimientos de cámaras y todos los elementos que nos ayuden a resaltar tu evento." },
     ],
     proceso: [
       { paso: "Reserva tu Fecha", descripcion: "Contáctanos y asegura tu evento." },
@@ -26,22 +26,23 @@ const servicios = [
       { texto: "Contraté la cobertura para un lanzamiento y el Reel fue un éxito en redes.", autor: "Carlos M., Emprendedor" },
     ],
     upsell: {
-      h2: "¿Más Impacto para tu Evento?",
-      texto: "Añade edición avanzada por $200 o una sesión de fotos profesional por $250.",
+      h2: "Captura Fotografías para tu evento",
+      texto: "Añade cobertura fotográfica con nuestros paquetes de fotografía.",
       cta: "Explora Opciones",
     },
     meta: {
-      title: "Cobertura de Eventos en Panamá | Videos y Fotos desde $350",
-      metaDescription: "Cobertura profesional para eventos en Panamá: bodas, conferencias y más. Videos y fotos de calidad, entrega en 48 horas. ¡Cotiza ahora!",
+      title: "Cobertura de Eventos en Panamá | Video desde $350",
+      metaDescription: "Cobertura profesional para eventos en Panamá:  conferencias y más. Videos y fotos de calidad, entrega en 48 horas. ¡Cotiza ahora!",
     },
+    Categorías: ['empresas', 'artistas', 'fundaciones']
   },
   {
     id: "video-musical",
     h1: "Producción de Videos Musicales en Panamá",
     subtitulo: "Transforma tu música en videos impactantes con un toque creativo único.",
     paquetes: [
-      { nombre: "Video Musical Básico", precio: 800, detalles: ["Video de 2-3 min", "Dirección creativa", "Edición básica"] },
-      { nombre: "Video Musical Premium", precio: 1500, detalles: ["Video de 3-5 min", "Grabación en locaciones únicas", "Postproducción avanzada"] },
+      { nombre: "Performance", precio: 1875, detalles: ['Video del Artista Interpretando su Canción', "Conceptualización y planificación que asegure un buen resultado", "Equipo de Trabajo que acompañará al Artista en todo el proceso"] },
+      { nombre: "Storyline", precio: 4500, detalles: ["Video Narrativo que apoya el contenido de la Canción", "Servicios especializados como scouting de locaciones, casting de modelos y actores", "Imágen cinematográfica que hará brillar la marca del Artista"] },
     ],
     porQueElegirnos: [
       { titulo: "Creatividad Única", descripcion: "Conceptos originales para tu música." },
@@ -54,7 +55,9 @@ const servicios = [
       { paso: "Entrega", descripcion: "Editamos y entregamos tu video." },
     ],
     muestras: [
-      { tipo: "video", src: "video-musical.mp4", descripcion: "Video Musical – Playa San Blas" },
+      { tipo: "video", src: "https://www.youtube.com/watch?v=6HQWtQnxuQg&pp=ygUQanVhbiBEaWVnbyBBcmF1etIHCQl-CQGHKiGM7w%3D%3D", descripcion: "En Algún Lugar - Juan Diego Arauz" },
+      { tipo: "video", src: "https://www.youtube.com/watch?v=bxvPlSN5LRk&pp=ygUNUGllcnJlIEJvdXRldA%3D%3D", descripcion: "Quizás - Pierre Boutet" },
+      { tipo: "video", src: "https://www.youtube.com/watch?v=bxvPlSN5LRk&pp=ygUNUGllcnJlIEJvdXRldA%3D%3D", descripcion: "Quizás - Pierre Boutet" }
     ],
     testimonios: [
       { texto: "Mi video musical quedó increíble, captaron mi estilo perfectamente.", autor: "Luis R., Músico" },
@@ -68,6 +71,8 @@ const servicios = [
       title: "Producción de Videos Musicales en Panamá | Desde $800",
       metaDescription: "Videos musicales creativos en Panamá desde $800. Grabación en locaciones únicas y edición profesional para artistas. ¡Contáctanos!",
     },
+    Categorías: ['empresas', 'artistas', 'fundaciones'],
+    Genero: 'Video Musical'
   },
   {
     id: "comercial",
@@ -102,6 +107,7 @@ const servicios = [
       title: "Publicidad Audiovisual en Panamá | Comerciales desde $600",
       metaDescription: "Comerciales profesionales para redes y TV en Panamá desde $600. Aumenta tus ventas con videos impactantes. ¡Cotiza hoy!",
     },
+    Categorías: ['empresas', 'artistas', 'fundaciones']
   },
   {
     id: "corporativos",
@@ -137,6 +143,7 @@ const servicios = [
       title: "Videos Corporativos en Panamá | Desde $500",
       metaDescription: "Videos corporativos y cortos documentales en Panamá desde $500. Fortalece tu marca con contenido profesional. ¡Contáctanos!",
     },
+    Categorías: ['empresas', 'artistas', 'fundaciones']
   },
   {
     id: "redes",
@@ -172,6 +179,7 @@ const servicios = [
       title: "Contenido para Redes Sociales en Panamá | Desde $300",
       metaDescription: "Producción de contenido para redes sociales en Panamá desde $300. Videos y fotos para Instagram, TikTok y más. ¡Cotiza ahora!",
     },
+    Categorías: ['empresas', 'artistas', 'fundaciones']
   },
   {
     id: "podcast",
@@ -206,6 +214,7 @@ const servicios = [
       title: "Producción de Podcasts en Panamá | Desde $300",
       metaDescription: "Producción de podcasts profesionales en Panamá desde $300. Audio y video de calidad para tu contenido. ¡Contáctanos hoy!",
     },
+    Categorías: ['empresas', 'artistas', 'fundaciones']
   },
 ];
 

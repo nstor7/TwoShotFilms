@@ -1,6 +1,7 @@
 .servicesList {
   padding: 2rem 1rem;
   text-align: center;
+  background: var(--fondo-negativo);
 }
 
 .servicesList h2 {
@@ -8,6 +9,7 @@
   font-weight: 400;
   text-transform: uppercase;
   margin-bottom: 2rem;
+  color: var(--titulo-negativo);
 }
 
 .servicesContainer {
@@ -21,6 +23,7 @@
   background: #fff;
   border: 1px solid #e5e5e5;
   text-align: left;
+  background: var(--fondo-negativo-secundario);
 }
 
 .serviceCard h3 {
@@ -28,20 +31,20 @@
   font-weight: 400;
   text-transform: uppercase;
   margin-bottom: 0.5rem;
-  color: #2d2d2d;
+  color: var(--titulo-negativo);
 }
 
 .serviceCard p {
   font-size: 0.9rem;
   font-weight: 300;
   margin-bottom: 1rem;
-  color: #666;
+  color: var(--titulo-negativo);
 }
 
 .serviceCard .price {
   font-family: Parrafo;
   font-size: 0.9rem;
-  color: #2d2d2d;
+  color: var(--titulo-negativo-secundario);
 }
 
 /* Contacto */
