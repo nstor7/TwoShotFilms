@@ -5,15 +5,21 @@ import Trabajos from '../DB/trabajos.js'; // Array de trabajos
 import styles from './inicio.module.css';
 import SocialLinks from '../components/SocialLinks.jsx';
 import PortfolioItem from '../components/portfolioItem.jsx';
+import Carousel from '../components/carousel.jsx';
 
 const Inicio = () => {
   // Seleccionamos algunos trabajos destacados (ej. los primeros 3)
   const featuredWorks = Trabajos.slice(0, 3);
+  var images= []
+  Trabajos.map(Trabajo => images.push(Trabajo.Thumnail))
+  console.log(images)
 
   return (
     <main className={styles.homePage}>
+      <Carousel images ={images} />
       {/* Hero Section */}
       <section className={`hero ${styles.hero}`}>
+        
         <div className="hero-content">
           <h1>Two Shot Films</h1>
           <p className='SubTitulo'>Transformamos tus ideas en historias cinematográficas</p>

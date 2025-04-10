@@ -105,6 +105,9 @@ p {
 
 /* Sección Hero común */
 .hero {
+  position: absolute;
+  top: 0;
+  width: 100vw;
   height: 80vh; /* Altura por defecto */
   display: flex;
   align-items: flex-end;

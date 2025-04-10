@@ -145,77 +145,77 @@ const servicios = [
     },
     Categorías: ['empresas', 'artistas', 'fundaciones']
   },
-  {
-    id: "redes",
-    h1: "Producción de Contenido para Redes Sociales",
-    subtitulo: "Destaca en Instagram, TikTok y Facebook con contenido visual profesional.",
-    paquetes: [
-      { nombre: "Paquete Básico Redes", precio: 300, detalles: ["4 publicaciones mensuales", "2 imágenes", "2 videos cortos (15-30 seg)"] },
-      { nombre: "Paquete Premium Redes", precio: 1000, detalles: ["12 publicaciones mensuales", "6 imágenes", "6 videos (30-90 seg)", "8 historias"] },
-    ],
-    porQueElegirnos: [
-      { titulo: "Consistencia", descripcion: "Contenido regular para tus redes." },
-      { titulo: "Engagement", descripcion: "Videos e imágenes que conectan." },
-      { titulo: "Personalización", descripcion: "Adaptado a tu marca." },
-    ],
-    proceso: [
-      { paso: "Planificación", descripcion: "Creamos un calendario mensual." },
-      { paso: "Producción", descripcion: "Grabamos y diseñamos tu contenido." },
-      { paso: "Entrega", descripcion: "Recibes todo listo para publicar." },
-    ],
-    muestras: [
-      { tipo: "video", src: "reel-redes.mp4", descripcion: "Reel – Tienda Online" },
-      { tipo: "imagen", src: "https://source.unsplash.com/random/600x400/?socialmedia", descripcion: "Post – Marca Local" },
-    ],
-    testimonios: [
-      { texto: "Mis redes crecieron un 50% con sus videos.", autor: "Juan P., Emprendedor" },
-    ],
-    upsell: {
-      h2: "¿Más Visibilidad?",
-      texto: "Añade edición avanzada por $200 o fotos profesionales por $250.",
-      cta: "Explora Opciones",
-    },
-    meta: {
-      title: "Contenido para Redes Sociales en Panamá | Desde $300",
-      metaDescription: "Producción de contenido para redes sociales en Panamá desde $300. Videos y fotos para Instagram, TikTok y más. ¡Cotiza ahora!",
-    },
-    Categorías: ['empresas', 'artistas', 'fundaciones']
-  },
-  {
-    id: "podcast",
-    h1: "Producción de Podcasts y Contenido Auditivo",
-    subtitulo: "Lleva tu voz al siguiente nivel con podcasts profesionales.",
-    paquetes: [
-      { nombre: "Podcast Básico", precio: 300, detalles: ["Grabación y edición de 1 episodio (30 min)", "Diseño de audio básico"] },
-      { nombre: "Podcast Premium", precio: 600, detalles: ["Producción completa de 1 episodio", "Video incluido", "Diseño de audio avanzado"] },
-    ],
-    porQueElegirnos: [
-      { titulo: "Calidad de Sonido", descripcion: "Audio limpio y profesional." },
-      { titulo: "Versatilidad", descripcion: "Con o sin video, según tus necesidades." },
-      { titulo: "Fácil Proceso", descripcion: "Grabamos y editamos por ti." },
-    ],
-    proceso: [
-      { paso: "Consulta", descripcion: "Definimos el formato y contenido." },
-      { paso: "Grabación", descripcion: "Capturamos tu episodio." },
-      { paso: "Entrega", descripcion: "Editamos y entregamos listo para publicar." },
-    ],
-    muestras: [
-      { tipo: "video", src: "podcast.mp4", descripcion: "Episodio – Podcast Local" },
-    ],
-    testimonios: [
-      { texto: "El audio de mi podcast es impecable y el video sumó mucho.", autor: "Laura S., Creadora de Contenido" },
-    ],
-    upsell: {
-      h2: "¿Más Impacto?",
-      texto: "Añade edición avanzada por $200 o fotos promocionales por $250.",
-      cta: "Explora Opciones",
-    },
-    meta: {
-      title: "Producción de Podcasts en Panamá | Desde $300",
-      metaDescription: "Producción de podcasts profesionales en Panamá desde $300. Audio y video de calidad para tu contenido. ¡Contáctanos hoy!",
-    },
-    Categorías: ['empresas', 'artistas', 'fundaciones']
-  },
+  // {
+  //   id: "redes",
+  //   h1: "Producción de Contenido para Redes Sociales",
+  //   subtitulo: "Destaca en Instagram, TikTok y Facebook con contenido visual profesional.",
+  //   paquetes: [
+  //     { nombre: "Paquete Básico Redes", precio: 300, detalles: ["4 publicaciones mensuales", "2 imágenes", "2 videos cortos (15-30 seg)"] },
+  //     { nombre: "Paquete Premium Redes", precio: 1000, detalles: ["12 publicaciones mensuales", "6 imágenes", "6 videos (30-90 seg)", "8 historias"] },
+  //   ],
+  //   porQueElegirnos: [
+  //     { titulo: "Consistencia", descripcion: "Contenido regular para tus redes." },
+  //     { titulo: "Engagement", descripcion: "Videos e imágenes que conectan." },
+  //     { titulo: "Personalización", descripcion: "Adaptado a tu marca." },
+  //   ],
+  //   proceso: [
+  //     { paso: "Planificación", descripcion: "Creamos un calendario mensual." },
+  //     { paso: "Producción", descripcion: "Grabamos y diseñamos tu contenido." },
+  //     { paso: "Entrega", descripcion: "Recibes todo listo para publicar." },
+  //   ],
+  //   muestras: [
+  //     { tipo: "video", src: "reel-redes.mp4", descripcion: "Reel – Tienda Online" },
+  //     { tipo: "imagen", src: "https://source.unsplash.com/random/600x400/?socialmedia", descripcion: "Post – Marca Local" },
+  //   ],
+  //   testimonios: [
+  //     { texto: "Mis redes crecieron un 50% con sus videos.", autor: "Juan P., Emprendedor" },
+  //   ],
+  //   upsell: {
+  //     h2: "¿Más Visibilidad?",
+  //     texto: "Añade edición avanzada por $200 o fotos profesionales por $250.",
+  //     cta: "Explora Opciones",
+  //   },
+  //   meta: {
+  //     title: "Contenido para Redes Sociales en Panamá | Desde $300",
+  //     metaDescription: "Producción de contenido para redes sociales en Panamá desde $300. Videos y fotos para Instagram, TikTok y más. ¡Cotiza ahora!",
+  //   },
+  //   Categorías: ['empresas', 'artistas', 'fundaciones']
+  // },
+  // {
+  //   id: "podcast",
+  //   h1: "Producción de Podcasts y Contenido Auditivo",
+  //   subtitulo: "Lleva tu voz al siguiente nivel con podcasts profesionales.",
+  //   paquetes: [
+  //     { nombre: "Podcast Básico", precio: 300, detalles: ["Grabación y edición de 1 episodio (30 min)", "Diseño de audio básico"] },
+  //     { nombre: "Podcast Premium", precio: 600, detalles: ["Producción completa de 1 episodio", "Video incluido", "Diseño de audio avanzado"] },
+  //   ],
+  //   porQueElegirnos: [
+  //     { titulo: "Calidad de Sonido", descripcion: "Audio limpio y profesional." },
+  //     { titulo: "Versatilidad", descripcion: "Con o sin video, según tus necesidades." },
+  //     { titulo: "Fácil Proceso", descripcion: "Grabamos y editamos por ti." },
+  //   ],
+  //   proceso: [
+  //     { paso: "Consulta", descripcion: "Definimos el formato y contenido." },
+  //     { paso: "Grabación", descripcion: "Capturamos tu episodio." },
+  //     { paso: "Entrega", descripcion: "Editamos y entregamos listo para publicar." },
+  //   ],
+  //   muestras: [
+  //     { tipo: "video", src: "podcast.mp4", descripcion: "Episodio – Podcast Local" },
+  //   ],
+  //   testimonios: [
+  //     { texto: "El audio de mi podcast es impecable y el video sumó mucho.", autor: "Laura S., Creadora de Contenido" },
+  //   ],
+  //   upsell: {
+  //     h2: "¿Más Impacto?",
+  //     texto: "Añade edición avanzada por $200 o fotos promocionales por $250.",
+  //     cta: "Explora Opciones",
+  //   },
+  //   meta: {
+  //     title: "Producción de Podcasts en Panamá | Desde $300",
+  //     metaDescription: "Producción de podcasts profesionales en Panamá desde $300. Audio y video de calidad para tu contenido. ¡Contáctanos hoy!",
+  //   },
+  //   Categorías: ['empresas', 'artistas', 'fundaciones']
+  // },
 ];
 
 export default servicios;

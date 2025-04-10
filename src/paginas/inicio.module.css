@@ -1,7 +1,4 @@
-.hero{
-  background:  url('/images/En_Algun_Lugar_Thumnail.jpg') center;
-  background-size: cover;
-}
+
 .hero h1{
   text-transform: uppercase;
   color: var(--titulo-negativo);
