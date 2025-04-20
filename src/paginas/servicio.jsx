@@ -3,15 +3,20 @@ import Servicios from '../DB/servicios.js';
 import style from './servicio.module.css';
 import PortfolioItem from '../components/portfolioItem.jsx';
 import Trabajos from '../DB/trabajos.js';
+import Carousel from '../components/carousel.jsx';
 
 
 const Servicio = () => {
     const { id } = useParams()
     var servicio = Servicios.find(servicio => servicio.id === id)
     const featuredWorks = Trabajos.filter(Trabajo => Trabajo.Genero === servicio.Genero).slice(0, 3)
+    var images = []
+    featuredWorks.map(Trabajo=> images.push(Trabajo.Thumnail))
+
   return (
     <>
         <div key={servicio.id} className={style.serviceSection}>
+          <Carousel images={images}/>
           <section className="hero">
             <div className="hero-content">
               <h1>{servicio.h1}</h1>

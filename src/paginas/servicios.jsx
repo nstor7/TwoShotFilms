@@ -1,9 +1,14 @@
 import servicios from '../DB/servicios.js';
 import style from './servicios.module.css';
+import Carousel from '../components/carousel.jsx';
+import Trabajos from '../DB/trabajos.js';
 
 const Servicios = () => {
+  var images = []
+  Trabajos.map(Trabajo => images.push(Trabajo.Thumnail))
   return (
     <>
+      <Carousel images={images}/>
       <section id="inicio" class="hero">
         <div className="hero-content">
             <h1>Servicios Audiovisuales en Panamá</h1>

@@ -1,12 +1,16 @@
 import Trabajos from '../DB/trabajos.js';
 import PortfolioItem from '../components/portfolioItem.jsx';
 import styles from './portfolioPage.module.css';
+import Carousel from '../components/carousel.jsx';
 
 const PortfolioPage = () => {
+  var images =[]
+  Trabajos.map(Trabajo=>images.push(Trabajo.Thumnail))
   return (
     <main className={styles.portfolioPage}>
-      <section className={`${styles.hero} hero slim`}>
-        <div className="hero-content slim-content">
+      <Carousel images={images}/>
+      <section className='hero'>
+        <div className="hero-content ">
           <h1>Portafolio</h1>
           <p>Nuestros trabajos más destacados</p>
         </div>
