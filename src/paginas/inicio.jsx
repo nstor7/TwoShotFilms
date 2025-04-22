@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import servicios from '../DB/servicios.js'; // Array de servicios
+import {Servicios} from '../DB/servicios.js'; // Array de servicios
 import Trabajos from '../DB/trabajos.js'; // Array de trabajos
 // import ServiceForm from './ServiceForm'; // Formulario reutilizable
 import styles from './inicio.module.css';
@@ -12,7 +12,6 @@ const Inicio = () => {
   const featuredWorks = Trabajos.slice(0, 3);
   var images= []
   Trabajos.map(Trabajo => images.push(Trabajo.Thumnail))
-  console.log(images)
 
   return (
     <main className={styles.homePage}>
@@ -31,7 +30,7 @@ const Inicio = () => {
       <section className={styles.servicesSection}>
         <h2>Nuestros Servicios</h2>
         <div className={styles.servicesGrid}>
-          {servicios.map(servicio => (
+          {Servicios.map(servicio => (
             <Link
               key={servicio.id}
               to={`servicios/${servicio.id}`}
@@ -66,7 +65,7 @@ La diferencia está en nuestro enfoque: convertimos tu mensaje en una experienci
             <PortfolioItem key={index} trabajo={trabajo} />
           ))}
         </div>
-        <Link to="/portafolio" className="btn btnPositivo">Explora Nuestro Portafolio</Link>
+        <Link to="/portfolio" className="btn btnPositivo">Explora Nuestro Portafolio</Link>
       </section>
 
       {/* Formulario de Contacto */}

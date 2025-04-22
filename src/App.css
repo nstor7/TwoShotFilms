@@ -22,6 +22,8 @@
 }
 /* Colores globales como variables */
 :root {
+  --gradiente-negativa: linear-gradient(#0f151e ,#1a2435 );
+  --gradiente-positiva:linear-gradient(#32b8b1, #28948f);
   --fondo-negativo: #0f151e;
   --fondo-negativo-secundario: #111922;
   --titulo-negativo: #d7d7d7;
@@ -81,11 +83,11 @@ p {
   letter-spacing: 0.1rem;
 }
 .btnNegativo {
-  background: var(--fondo-negativo);
+  background: var(--gradiente-negativa);
   color: var(--titulo-negativo);
 }
 .btnPositivo {
-  background: var(--fondo-positivo-secundario);
+  background: var(--gradiente-positiva);
   color: var(--titulo-positivo);
 }
 .btn:hover {

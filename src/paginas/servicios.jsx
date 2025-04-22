@@ -1,9 +1,9 @@
-import servicios from '../DB/servicios.js';
+import { Servicios } from '../DB/servicios.js';
 import style from './servicios.module.css';
 import Carousel from '../components/carousel.jsx';
 import Trabajos from '../DB/trabajos.js';
 
-const Servicios = () => {
+const serviciosPagina = () => {
   var images = []
   Trabajos.map(Trabajo => images.push(Trabajo.Thumnail))
   return (
@@ -19,7 +19,7 @@ const Servicios = () => {
       <section id="servicios" className={style.servicesList}>
         <h2>Nuestros Servicios</h2>
         <div className={style.servicesContainer}>
-          {servicios.map(servicio => (
+          {Servicios.map(servicio => (
             <div key={servicio.id} className={style.serviceCard}>
               <h3>{servicio.h1}</h3>
               <p>{servicio.subtitulo}</p>
@@ -44,4 +44,4 @@ const Servicios = () => {
   )
 }
 
-export default Servicios
+export default serviciosPagina

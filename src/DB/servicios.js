@@ -1,52 +1,53 @@
-const servicios = [
-  {
-    id: "eventos",
-    h1: "Cobertura Profesional para Eventos en Panamá",
-    subtitulo: "Captura cada momento con videos y fotos de calidad, entrega en 48 horas.",
-    paquetes: [
-      { nombre: "Paquete Básico", precio: 350, detalles: ["Video Highlight (1-2 min horizontal)", "Reel para Redes (30-40 seg en vertical)", "Entrega en 48 horas"] },
-      { nombre: "Paquete Estándar", precio: 600, detalles: ["Video Highlight (3-5 min)", "2 Reel para Redes (30-40 seg)", "Entrega en 72 horas"] },
-    ],
-    porQueElegirnos: [
-      { titulo: "Entrega Rápida", descripcion: "Recibe tu video y fotos en 48-72 horas." },
-      { titulo: "Precios Accesibles", descripcion: "Calidad profesional desde solo $350." },
-      { titulo: "Calidad Cinematográfica", descripcion: "Elegiremos planos, movimientos de cámaras y todos los elementos que nos ayuden a resaltar tu evento." },
-    ],
-    proceso: [
-      { paso: "Reserva tu Fecha", descripcion: "Contáctanos y asegura tu evento." },
-      { paso: "Grabamos tu Evento", descripcion: "Capturamos cada momento clave." },
-      { paso: "Recibe tu Material", descripcion: "Entrega rápida en 48-72 horas." },
-    ],
-    muestras: [
-      { tipo: "video", src: "video-boda.mp4", descripcion: "Boda en Casco Antiguo – Video Highlight" },
-      { tipo: "imagen", src: "https://source.unsplash.com/random/600x400/?event", descripcion: "Conferencia Corporativa – Fotos" },
-    ],
-    testimonios: [
-      { texto: "El video de mi boda fue perfecto y llegó en 2 días. ¡Superaron mis expectativas!", autor: "Ana G., Organizadora de Bodas" },
-      { texto: "Contraté la cobertura para un lanzamiento y el Reel fue un éxito en redes.", autor: "Carlos M., Emprendedor" },
-    ],
-    upsell: {
-      h2: "Captura Fotografías para tu evento",
-      texto: "Añade cobertura fotográfica con nuestros paquetes de fotografía.",
-      cta: "Explora Opciones",
-    },
-    meta: {
-      title: "Cobertura de Eventos en Panamá | Video desde $350",
-      metaDescription: "Cobertura profesional para eventos en Panamá:  conferencias y más. Videos y fotos de calidad, entrega en 48 horas. ¡Cotiza ahora!",
-    },
-    Categorías: ['empresas', 'artistas', 'fundaciones']
-  },
+export const Servicios = [
+  // {
+  //   id: "eventos",
+  //   h1: "Cobertura Profesional para Eventos en Panamá",
+  //   subtitulo: "Captura cada momento con videos y fotos de calidad, entrega en 48 horas.",
+  //   paquetes: [
+  //     { nombre: "Paquete Básico", precio: 350, detalles: ["Video Highlight (1-2 min horizontal)", "Reel para Redes (30-40 seg en vertical)", "Entrega en 48 horas"] },
+  //     { nombre: "Paquete Estándar", precio: 600, detalles: ["Video Highlight (3-5 min)", "2 Reel para Redes (30-40 seg)", "Entrega en 72 horas"] },
+  //   ],
+  //   porQueElegirnos: [
+  //     { titulo: "Entrega Rápida", descripcion: "Recibe tu video y fotos en 48-72 horas." },
+  //     { titulo: "Precios Accesibles", descripcion: "Calidad profesional desde solo $350." },
+  //     { titulo: "Calidad Cinematográfica", descripcion: "Elegiremos planos, movimientos de cámaras y todos los elementos que nos ayuden a resaltar tu evento." },
+  //   ],
+  //   proceso: [
+  //     { paso: "Reserva tu Fecha", descripcion: "Contáctanos y asegura tu evento." },
+  //     { paso: "Grabamos tu Evento", descripcion: "Capturamos cada momento clave." },
+  //     { paso: "Recibe tu Material", descripcion: "Entrega rápida en 48-72 horas." },
+  //   ],
+  //   muestras: [
+  //     { tipo: "video", src: "video-boda.mp4", descripcion: "Boda en Casco Antiguo – Video Highlight" },
+  //     { tipo: "imagen", src: "https://source.unsplash.com/random/600x400/?event", descripcion: "Conferencia Corporativa – Fotos" },
+  //   ],
+  //   testimonios: [
+  //     { texto: "El video de mi boda fue perfecto y llegó en 2 días. ¡Superaron mis expectativas!", autor: "Ana G., Organizadora de Bodas" },
+  //     { texto: "Contraté la cobertura para un lanzamiento y el Reel fue un éxito en redes.", autor: "Carlos M., Emprendedor" },
+  //   ],
+  //   upsell: {
+  //     h2: "Captura Fotografías para tu evento",
+  //     texto: "Añade cobertura fotográfica con nuestros paquetes de fotografía.",
+  //     cta: "Explora Opciones",
+  //   },
+  //   meta: {
+  //     title: "Cobertura de Eventos en Panamá | Video desde $350",
+  //     metaDescription: "Cobertura profesional para eventos en Panamá:  conferencias y más. Videos y fotos de calidad, entrega en 48 horas. ¡Cotiza ahora!",
+  //   },
+  //   Categorías: ['empresas', 'artistas', 'fundaciones'],
+  //   Genero: 'Cobertura'
+  // },
   {
     id: "video-musical",
     h1: "Producción de Videos Musicales en Panamá",
-    subtitulo: "Transforma tu música en videos impactantes con un toque creativo único.",
+    subtitulo: "Resalta tu música y comunica tu visión artística a tus seguidores con un video musical impactante.",
     paquetes: [
       { nombre: "Performance", precio: 1875, detalles: ['Video del Artista Interpretando su Canción', "Conceptualización y planificación que asegure un buen resultado", "Equipo de Trabajo que acompañará al Artista en todo el proceso"] },
       { nombre: "Storyline", precio: 4500, detalles: ["Video Narrativo que apoya el contenido de la Canción", "Servicios especializados como scouting de locaciones, casting de modelos y actores", "Imágen cinematográfica que hará brillar la marca del Artista"] },
     ],
     porQueElegirnos: [
-      { titulo: "Creatividad Única", descripcion: "Conceptos originales para tu música." },
-      { titulo: "Locaciones Panameñas", descripcion: "Aprovechamos los mejores escenarios." },
+      { titulo: "Conocimiento Musical", descripcion: "Más de 35 años de experiencia en la industria de la música." },
+      { titulo: "Enfasis en el artista", descripcion: "Creamos historias que resalten la visión del artista." },
       { titulo: "Producción Completa", descripcion: "Desde la idea hasta el video final." },
     ],
     proceso: [
@@ -68,10 +69,10 @@ const servicios = [
       cta: "Explora Opciones",
     },
     meta: {
-      title: "Producción de Videos Musicales en Panamá | Desde $800",
-      metaDescription: "Videos musicales creativos en Panamá desde $800. Grabación en locaciones únicas y edición profesional para artistas. ¡Contáctanos!",
+      title: "Producción de Videos Musicales en Panamá",
+      metaDescription: "Creación de videos Musicales con calidad cinematográfica. Nuestra misión es resaltar tu imágen, valores y visión como artista, usando el video para contar historias impactantes o creando experiencias que enaltescan tus canciones",
     },
-    Categorías: ['empresas', 'artistas', 'fundaciones'],
+    Categorías: [ 'artistas'],
     Genero: 'Video Musical'
   },
   {
@@ -218,4 +219,20 @@ const servicios = [
   // },
 ];
 
-export default servicios;
+export const serviciosCategorias = [
+  {
+    id: 'empresas',
+    titulo: 'Servicios Audiovisuales Para Empresas',
+    subtitulo: 'Eleva tu marca con un video cinematográfico que conecte con tus clientes'
+  },
+  {
+    id: 'artistas',
+    titulo: 'Servicios Audiovisuales Para Artistas',
+    subtitulo: 'Conecta con tus fanáticos a traves de videos que expresen tu visión artística'
+  },
+  {
+    id: 'fundaciones',
+    titulo: 'Servicios Audiovisuales para Fundaciones',
+    subtitulo: 'Muestra la visión de tu proyecto e impacta con un video cinematográfico'
+  }
+]

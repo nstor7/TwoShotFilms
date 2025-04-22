@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { NavLink } from 'react-router-dom';
-import servicios from './DB/servicios';
+import {Servicios} from './DB/servicios';
 import styles from './header.module.css';
 import Social from './components/SocialLinks'
 // {servicios.map(servicio => (

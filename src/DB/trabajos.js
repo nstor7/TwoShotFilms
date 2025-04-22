@@ -25,13 +25,14 @@ const Trabajos = [
   },
   {
     Titulo: 'El Legado Charpentier',
-    SubTitulo: '',
+    SubTitulo: 'Documental sobre la vida y obra de Eduardo Charpentier de Castro y Eduardo Charpentier Herrera',
     Genero: 'Documental',
     vinculo: 'El_Legado_Charpentier',
     cliente: 'FUNSINCOPA',
     Thumnail: '/images/Thumnail_Docu_Charpentier.jpg',
     Roles: [ 'Dirección', 'Cinematografía', 'Edición', 'Colorización', 'Sonido', 'Post de Sonido','Produción', 'Realización'],
-    Descripcion:' Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio fuga minima dignissimos magnam odio iste commodi similique? Facilis, reiciendis unde eos incidunt similique cum odit atque temporibus a harum ea?'
+    Descripcion:' Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio fuga minima dignissimos magnam odio iste commodi similique? Facilis, reiciendis unde eos incidunt similique cum odit atque temporibus a harum ea?',
+    categoria: 'empresas'
   },
   
   {
