@@ -1,42 +1,40 @@
+var custom = {nombre: 'custom', precio: 'por definir', detalles:['Crearemos un servicio que se ajuste a tus necesidades.'] }
 export const Servicios = [
-  // {
-  //   id: "eventos",
-  //   h1: "Cobertura Profesional para Eventos en Panamá",
-  //   subtitulo: "Captura cada momento con videos y fotos de calidad, entrega en 48 horas.",
-  //   paquetes: [
-  //     { nombre: "Paquete Básico", precio: 350, detalles: ["Video Highlight (1-2 min horizontal)", "Reel para Redes (30-40 seg en vertical)", "Entrega en 48 horas"] },
-  //     { nombre: "Paquete Estándar", precio: 600, detalles: ["Video Highlight (3-5 min)", "2 Reel para Redes (30-40 seg)", "Entrega en 72 horas"] },
-  //   ],
-  //   porQueElegirnos: [
-  //     { titulo: "Entrega Rápida", descripcion: "Recibe tu video y fotos en 48-72 horas." },
-  //     { titulo: "Precios Accesibles", descripcion: "Calidad profesional desde solo $350." },
-  //     { titulo: "Calidad Cinematográfica", descripcion: "Elegiremos planos, movimientos de cámaras y todos los elementos que nos ayuden a resaltar tu evento." },
-  //   ],
-  //   proceso: [
-  //     { paso: "Reserva tu Fecha", descripcion: "Contáctanos y asegura tu evento." },
-  //     { paso: "Grabamos tu Evento", descripcion: "Capturamos cada momento clave." },
-  //     { paso: "Recibe tu Material", descripcion: "Entrega rápida en 48-72 horas." },
-  //   ],
-  //   muestras: [
-  //     { tipo: "video", src: "video-boda.mp4", descripcion: "Boda en Casco Antiguo – Video Highlight" },
-  //     { tipo: "imagen", src: "https://source.unsplash.com/random/600x400/?event", descripcion: "Conferencia Corporativa – Fotos" },
-  //   ],
-  //   testimonios: [
-  //     { texto: "El video de mi boda fue perfecto y llegó en 2 días. ¡Superaron mis expectativas!", autor: "Ana G., Organizadora de Bodas" },
-  //     { texto: "Contraté la cobertura para un lanzamiento y el Reel fue un éxito en redes.", autor: "Carlos M., Emprendedor" },
-  //   ],
-  //   upsell: {
-  //     h2: "Captura Fotografías para tu evento",
-  //     texto: "Añade cobertura fotográfica con nuestros paquetes de fotografía.",
-  //     cta: "Explora Opciones",
-  //   },
-  //   meta: {
-  //     title: "Cobertura de Eventos en Panamá | Video desde $350",
-  //     metaDescription: "Cobertura profesional para eventos en Panamá:  conferencias y más. Videos y fotos de calidad, entrega en 48 horas. ¡Cotiza ahora!",
-  //   },
-  //   Categorías: ['empresas', 'artistas', 'fundaciones'],
-  //   Genero: 'Cobertura'
-  // },
+  {
+    id: "eventos",
+    h1: "Cobertura Profesional para Eventos en Panamá",
+    subtitulo: "Captura cada momento con videos y fotos de calidad, entrega en 48 horas.",
+    paquetes: [
+      { nombre: "Highlights", precio: 350, detalles: ["Video Highlight (1-2 min horizontal)", "Reel para Redes (30-40 seg en vertical)", "Entrega en 48 horas"] },
+      { nombre: "Event Journey", precio: 600, detalles: ["Video Highlight (3-5 min)", "2 Reel para Redes (30-40 seg)", "Entrega en 72 horas"] },
+      custom
+    ],
+    porQueElegirnos: [
+      { titulo: "Entrega Rápida", descripcion: "Recibe tu video y fotos en 48-72 horas." },
+      { titulo: "Precios Accesibles", descripcion: "Calidad profesional desde solo $350." },
+      { titulo: "Calidad Cinematográfica", descripcion: "Elegiremos planos, movimientos de cámaras y todos los elementos que nos ayuden a resaltar tu evento." },
+    ],
+    proceso: [
+      { paso: "Reserva tu Fecha", descripcion: "Contáctanos y asegura tu evento." },
+      { paso: "Grabamos tu Evento", descripcion: "Capturamos cada momento importante." },
+      { paso: "Recibe tu Material", descripcion: "Entrega rápida en 48-72 horas." },
+    ],
+    testimonios: [
+      { texto: "El video de mi boda fue perfecto y llegó en 2 días. ¡Superaron mis expectativas!", autor: "Ana G., Organizadora de Bodas" },
+      { texto: "Contraté la cobertura para un lanzamiento y el Reel fue un éxito en redes.", autor: "Carlos M., Emprendedor" },
+    ],
+    upsell: {
+      h2: "Captura Fotografías para tu evento",
+      texto: "Añade cobertura fotográfica con nuestros paquetes de fotografía.",
+      cta: "Explora Opciones",
+    },
+    meta: {
+      title: "Cobertura de Eventos en Panamá | Video desde $350",
+      metaDescription: "Cobertura profesional para eventos en Panamá:  conferencias y más. entrega en 48 horas. ¡Cotiza ahora!",
+    },
+    Categorías: ['empresas', 'artistas', 'fundaciones'],
+    Genero: 'Cobertura'
+  },
   {
     id: "video-musical",
     h1: "Producción de Videos Musicales en Panamá",
@@ -44,6 +42,7 @@ export const Servicios = [
     paquetes: [
       { nombre: "Performance", precio: 1875, detalles: ['Video del Artista Interpretando su Canción', "Conceptualización y planificación que asegure un buen resultado", "Equipo de Trabajo que acompañará al Artista en todo el proceso"] },
       { nombre: "Storyline", precio: 4500, detalles: ["Video Narrativo que apoya el contenido de la Canción", "Servicios especializados como scouting de locaciones, casting de modelos y actores", "Imágen cinematográfica que hará brillar la marca del Artista"] },
+      custom
     ],
     porQueElegirnos: [
       { titulo: "Conocimiento Musical", descripcion: "Más de 35 años de experiencia en la industria de la música." },
@@ -80,8 +79,9 @@ export const Servicios = [
     h1: "Publicidad Audiovisual para tu Negocio",
     subtitulo: "Comerciales que venden, diseñados para redes sociales y TV.",
     paquetes: [
-      { nombre: "Comercial Básico", precio: 600, detalles: ["Comercial de 30 seg", "Edición básica", "1 día de grabación"] },
-      { nombre: "Comercial Premium", precio: 1500, detalles: ["Comercial de 60 seg", "Guion incluido", "Edición avanzada"] },
+      { nombre: "Essence Spot", precio: 2700, detalles: ["Comercial de 30 seg", "Edición básicas, tomas del producto o concepto definido, con voz en off y música de fondo", "1 día de grabación"] },
+      { nombre: "Branded Story", precio: 5500, detalles: ["Comercial de 60 seg", "Creación de historia enfocadas en los valores de la marca", "2 días de grabación"] },
+      custom
     ],
     porQueElegirnos: [
       { titulo: "Impacto Visual", descripcion: "Videos que captan la atención." },
@@ -108,15 +108,17 @@ export const Servicios = [
       title: "Publicidad Audiovisual en Panamá | Comerciales desde $600",
       metaDescription: "Comerciales profesionales para redes y TV en Panamá desde $600. Aumenta tus ventas con videos impactantes. ¡Cotiza hoy!",
     },
-    Categorías: ['empresas', 'artistas', 'fundaciones']
+    Categorías: ['empresas', 'artistas', 'fundaciones'],
+    Genero: 'Comercial'
   },
   {
     id: "corporativos",
-    h1: "Videos Corporativos y Cortos Documentales",
-    subtitulo: "Fortalece tu marca con videos institucionales o cortos documentales impactantes.",
+    h1: "Videos Corporativos y Corto Documental",
+    subtitulo: "Fortalece tu marca con videos institucionales o un cortometraje documental impactante.",
     paquetes: [
-      { nombre: "Video Corporativo Básico", precio: 500, detalles: ["Video de 2-3 min", "Edición básica", "1 día de grabación"] },
-      { nombre: "Corto Documental Corporativo", precio: 1200, detalles: ["Video de 5-7 min", "Entrevistas y narrativa", "Edición avanzada"] },
+      { nombre: "The Spark", precio: 600, detalles: ["Video de 2-3 min", "Perfectos para transmitir la escencia de la marca, la pasión por el producto para motivar a clientes", "1 día de grabación"] },
+      { nombre: "Inside The Brand", precio: 1200, detalles: ["Video de 5-7 min", "Ideal para contar la historia de la empresas, documental que es útil en eventos como aniversarios", "2 días de grabación y revisión de archivo"] },
+      custom
     ],
     porQueElegirnos: [
       { titulo: "Profesionalismo", descripcion: "Videos que reflejan tu identidad." },
@@ -144,44 +146,47 @@ export const Servicios = [
       title: "Videos Corporativos en Panamá | Desde $500",
       metaDescription: "Videos corporativos y cortos documentales en Panamá desde $500. Fortalece tu marca con contenido profesional. ¡Contáctanos!",
     },
-    Categorías: ['empresas', 'artistas', 'fundaciones']
+    Categorías: ['empresas', 'artistas', 'fundaciones'],
+    Genero: 'Documental'
   },
-  // {
-  //   id: "redes",
-  //   h1: "Producción de Contenido para Redes Sociales",
-  //   subtitulo: "Destaca en Instagram, TikTok y Facebook con contenido visual profesional.",
-  //   paquetes: [
-  //     { nombre: "Paquete Básico Redes", precio: 300, detalles: ["4 publicaciones mensuales", "2 imágenes", "2 videos cortos (15-30 seg)"] },
-  //     { nombre: "Paquete Premium Redes", precio: 1000, detalles: ["12 publicaciones mensuales", "6 imágenes", "6 videos (30-90 seg)", "8 historias"] },
-  //   ],
-  //   porQueElegirnos: [
-  //     { titulo: "Consistencia", descripcion: "Contenido regular para tus redes." },
-  //     { titulo: "Engagement", descripcion: "Videos e imágenes que conectan." },
-  //     { titulo: "Personalización", descripcion: "Adaptado a tu marca." },
-  //   ],
-  //   proceso: [
-  //     { paso: "Planificación", descripcion: "Creamos un calendario mensual." },
-  //     { paso: "Producción", descripcion: "Grabamos y diseñamos tu contenido." },
-  //     { paso: "Entrega", descripcion: "Recibes todo listo para publicar." },
-  //   ],
-  //   muestras: [
-  //     { tipo: "video", src: "reel-redes.mp4", descripcion: "Reel – Tienda Online" },
-  //     { tipo: "imagen", src: "https://source.unsplash.com/random/600x400/?socialmedia", descripcion: "Post – Marca Local" },
-  //   ],
-  //   testimonios: [
-  //     { texto: "Mis redes crecieron un 50% con sus videos.", autor: "Juan P., Emprendedor" },
-  //   ],
-  //   upsell: {
-  //     h2: "¿Más Visibilidad?",
-  //     texto: "Añade edición avanzada por $200 o fotos profesionales por $250.",
-  //     cta: "Explora Opciones",
-  //   },
-  //   meta: {
-  //     title: "Contenido para Redes Sociales en Panamá | Desde $300",
-  //     metaDescription: "Producción de contenido para redes sociales en Panamá desde $300. Videos y fotos para Instagram, TikTok y más. ¡Cotiza ahora!",
-  //   },
-  //   Categorías: ['empresas', 'artistas', 'fundaciones']
-  // },
+  {
+    id: "redes",
+    h1: "Producción de Contenido para Redes Sociales",
+    subtitulo: "Destaca en Instagram, TikTok y Facebook con contenido visual profesional.",
+    paquetes: [
+      { nombre: "Digital Presence", precio: 600, detalles: ["8 publicaciones mensuales", "Excelente para tener una presencia digital constante", "Práctico cuando hay poco tiempo pero no queremos dejar las redes de lado"] },
+      { nombre: "Social Boost", precio: 1200, detalles: ["16 publicaciones mensuales", "Ideal para cuando quieres tener una estratégia más agresiva, que tus clientes te tengan en su mente constantemente", "Para una empresa que quiere ir con todo para mejorar su engagement con sus clientes."] },
+      custom
+    ],
+    porQueElegirnos: [
+      { titulo: "Consistencia", descripcion: "Contenido regular para tus redes." },
+      { titulo: "Engagement", descripcion: "Videos e imágenes que conectan." },
+      { titulo: "Personalización", descripcion: "Adaptado a tu marca." },
+    ],
+    proceso: [
+      { paso: "Planificación", descripcion: "Creamos un calendario mensual." },
+      { paso: "Producción", descripcion: "Grabamos y diseñamos tu contenido." },
+      { paso: "Entrega", descripcion: "Recibes todo listo para publicar." },
+    ],
+    muestras: [
+      { tipo: "video", src: "reel-redes.mp4", descripcion: "Reel – Tienda Online" },
+      { tipo: "imagen", src: "https://source.unsplash.com/random/600x400/?socialmedia", descripcion: "Post – Marca Local" },
+    ],
+    testimonios: [
+      { texto: "Mis redes crecieron un 50% con sus videos.", autor: "Juan P., Emprendedor" },
+    ],
+    upsell: {
+      h2: "¿Más Visibilidad?",
+      texto: "Añade edición avanzada por $200 o fotos profesionales por $250.",
+      cta: "Explora Opciones",
+    },
+    meta: {
+      title: "Contenido para Redes Sociales en Panamá | Desde $300",
+      metaDescription: "Producción de contenido para redes sociales en Panamá desde $300. Videos y fotos para Instagram, TikTok y más. ¡Cotiza ahora!",
+    },
+    Categorías: ['empresas', 'artistas', 'fundaciones'],
+    Genero: 'Redes'
+  },
   // {
   //   id: "podcast",
   //   h1: "Producción de Podcasts y Contenido Auditivo",

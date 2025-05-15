@@ -55,16 +55,16 @@ const Servicio = () => {
             </div>
           </section>
 
-          <section className={style.portfolio}>
+          {/* <section className={style.portfolio}>
             <h2>Muestras de Nuestro Trabajo</h2>
             <div className={style.portfolioContainer}>
             {featuredWorks.map((trabajo, index) => (
             <PortfolioItem key={index} trabajo={trabajo} />
           ))}
             </div>
-          </section>
+          </section> */}
 
-          <section className={style.testimonials}>
+          {/* <section className={style.testimonials}>
             <h2>Lo Que Dicen Nuestros Clientes</h2>
             <div className={style.testimonialsContainer}>
               {Service.testimonios.map((testimonio, index) => (
@@ -74,7 +74,7 @@ const Servicio = () => {
                 </div>
               ))}
             </div>
-          </section>
+          </section> */}
 
           <section className={style.process}>
             <h2>Nuestro Proceso es Simple</h2>
@@ -88,11 +88,11 @@ const Servicio = () => {
             </div>
           </section>
 
-          <section className={style.upsell}>
+          {/* <section className={style.upsell}>
             <h2>{Service.upsell.h2}</h2>
             <p>{Service.upsell.texto}</p>
             <a href="#" className="btn btnNegativo">{Service.upsell.cta}</a>
-          </section>
+          </section> */}
 
           <section id="contacto" className={style.contact}>
             <h2>Contáctanos Hoy</h2>
