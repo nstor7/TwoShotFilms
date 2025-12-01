@@ -1,15 +1,27 @@
+@keyframes colorized{
+  0%{
+    background: transparent;
+    color: var(--blanco-texto);
+  }
+  100%{
+    background: var(--azul-fondo);
+    color: var(--azul-texto);
+  }
+}
+@keyframes colorizedLinks{
+  0%{
+    color: var(--blanco-texto);
+  }
+  100%{
+    color: var(--azul-texto);
+  }
+}
 .header {
   position: fixed;
   width: 100%;
-  background: transparent;
   padding: 1rem;
   z-index: 1000;
-  transition: background-color 0.7s ease;
-}
 
-.scrolled {
-  background: var(--gradiente-negativa);
-  box-shadow: 2px 5px 50px rgba(0,0,0,0.6) ;
 }
 
 .logo {
@@ -26,48 +38,51 @@
 }
 
 .navLink {
-  color: var(--titulo-negativo);
+  color: var(--azul-texto);
   text-decoration: none;
   transition: color 0.3s ease;
-  font-family: Parrafo;
+  font-family: Titulo3;
   font-size: 0.9rem;
-}
-
-
-.active {
-  color: #ccc;
-}
-
-.scrolled .active {
-  color: var(--secondary-text);
+  animation: colorizedLinks linear;
+  animation-timeline: scroll(block);
+  animation-range:0  300px;
 }
 
 @media (min-width: 768px) {
+
+
   .header {
-      padding: 0.5rem 4rem;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
+    padding: 0.5rem 4rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+    animation: colorized linear;
+    animation-timeline: scroll(block);
+    animation-range: 0 300px;
+    background: var(--azul-fondo);
   }
 
   .logo {
     width: 6vw;
+    justify-self: start;
   }
 
   .nav {
       display: block;
+      
   }
 
   .navList {
-      display: flex;
-      gap: 4rem;
+      display: grid;
+      grid-template-columns: repeat(3, auto);
+      gap: 1rem;
+      justify-self: center;
   }
 
   .navLink:hover {
       color: #ccc;
   }
-
-  .scrolled .navLink:hover {
-      color: var(--secondary-text);
+  .header :nth-child(3){
+    justify-self: right;
   }
 }

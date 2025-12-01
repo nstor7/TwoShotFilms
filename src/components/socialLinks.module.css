@@ -2,7 +2,7 @@
   display: flex;
   gap: 1rem;
   justify-content: center;
-  padding: 1rem;
+
 }
 
 .socialIcon {
@@ -16,7 +16,7 @@
 
 @media (min-width: 768px) {
   .socialLinks {
-      padding: 1.5rem;
+      padding: 1.5rem
   }
 
   .socialIcon {

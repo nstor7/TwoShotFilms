@@ -5,7 +5,7 @@
   box-sizing: border-box;
 }
 
-/* Tipografía global */
+/* Tipografías globales */
 @font-face{
   font-family: Titulo;
   src: local('Morganite-Bold'), url('./assets/fonts/Morganite-Bold.ttf');
@@ -13,16 +13,44 @@
   font-weight: bold;
 }
 @font-face{
+  font-family: Titulo2;
+  src: local('Moniqa-Heading'), url'./assets/Moniqa/Moniqa-Heading.ttf';
+  font-style: bold;
+  font-weight: bold;
+}
+@font-face{
+  font-family: Titulo3;
+  src: local('Nohemi-Bold'), url('./assets/nohemi/Nohemi-Bold.woff');
+  font-style: Bold;
+  font-weight: Bold;
+}
+@font-face{
   font-family: SubTitulo;
-  src: local('Aileron-Light'), url('./assets/fonts/Aileron-Light.otf');
+  src: local('Nohemi-Thin'), url('./assets/nohemi/Nohemi-Thin.woff');
 }
 @font-face{
   font-family: Parrafo;
-  src: local('Aileron-Regular'), url('./assets/fonts/Aileron-Regular.otf');
+  src: local('Nohemi-Light'), url('./assets/nohemi/Nohemi-Light.woff');
+
 }
+œfont-face{
+  font-family: Cursiva;
+  src: local('Nohemi-italic'), url('./assets/fo')
+}
+/* Efectos Globales */
+
 /* Colores globales como variables */
 :root {
-  --gradiente-negativa: linear-gradient(#0f151e ,#1a2435 );
+  --azul-fondo: #111922;
+  --azul-texto: #787d84;
+  --gris-fondo: #101214;
+  --gris-texto: #9a9a9a;
+  --blanco-texto: white;
+  --dorado-fondo:#29251C;
+  --dorado-texto:#968F83;
+  --gradiente-azul: linear-gradient(#0f151e ,#1a2435 );
+}
+  /* 
   --gradiente-positiva:linear-gradient(#32b8b1, #28948f);
   --fondo-negativo: #0f151e;
   --fondo-negativo-secundario: #111922;
@@ -38,10 +66,10 @@
   --border-color: #e5e5e5;
   --bg-light: #f8f8f8;
   --bg-dark: #2d2d2d;
-  --hover-dark: #666;
-}
-
+  --hover-dark: #666; */
 /* Tipografía común */
+/* 
+
 h1, h2{
   font-family: Titulo;
   color: var(--titulo-positivo-secundario);
@@ -68,7 +96,7 @@ p {
   font-size: 1rem;
 }
 
-/* Botón común */
+
 .btn {
   display: inline-block;
   padding: 0.8rem 1.5rem;
@@ -105,28 +133,10 @@ p {
   color: #fff;
 }
 
-/* Sección Hero común */
-.hero {
-  position: absolute;
-  top: 0;
-  width: 100vw;
-  height: 80vh; /* Altura por defecto */
-  display: flex;
-  align-items: flex-end;
-  justify-content: center;
-  text-align: center;
-  color: #fff;
-  
-}
-.hero-content{
-  width: 100%;
-  height: 100%;
-  padding: 50vh 0 0 0;
-  background: linear-gradient(rgba(0, 0, 0, 0.7)0% 10%, rgba(0, 0, 0, 0)25% 50%, rgba(0, 0, 0, 0.5)) ;
-  align-items: end;
-}
+
+
 .hero .slim {
-  height: 40vh; /* Variación más delgada para portafolio */
+  height: 40vh; 
 }
 
 .slim-content{
@@ -139,7 +149,7 @@ p {
 
 }
 
-/* Tarjeta común (para servicios y portafolio) */
+
 .card {
   padding: 1.5rem;
   border: 1px solid var(--border-color);
@@ -173,7 +183,7 @@ input {
   text-decoration: underline;
 }
 
-/* Media Queries globales */
+
 @media (min-width: 768px) {
   h1 {
       font-size: 8rem;
@@ -197,9 +207,7 @@ input {
       font-size: 1rem;
   }
 
-  .hero {
-      height: 90vh;
-  }
+
 
   .hero.slim {
       height: 50vh;
@@ -211,10 +219,7 @@ input {
   .hero{
     background-attachment: fixed;
   }
-  .hero-content{
-    padding-top: 60vh;
-    background: linear-gradient(rgba(0, 0, 0, 0.7)0% 3%, rgba(0, 0, 0, 0)25% 50%, rgba(0, 0, 0, 0.5)) ;
-  }
+  
   .slim-content{
     padding-top: 30vh;
   }
@@ -239,4 +244,4 @@ input {
 .contact p {
     font-size: 1rem;
 }
-}
+} */

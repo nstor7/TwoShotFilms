@@ -11,9 +11,9 @@ const Footer = () => {
           <a href="/portafolio" className={styles.footerLink}>Portafolio</a> | 
           <a href="/#contacto" className={styles.footerLink}>Contacto</a>
         </p>
-        <p>Tel: +507 123-4567 | Email: <a href="mailto:info@tuproductora.com" className={styles.footerLink}>info@tuproductora.com</a></p>
+        <p>Tel: +507 6643-3692 | Email: <a href="mailto:nstor777@gmail.com" className={styles.footerLink}>nstor777@gmail.com</a></p>
         <SocialLinks />
-        <p>© 2025 [Tu Productora]. Todos los derechos reservados.</p>
+        <p>© 2025 Two Shot Films. Todos los derechos reservados.</p>
       </div>
     </footer>
   );

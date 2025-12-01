@@ -2,27 +2,28 @@ import React, { useState, useEffect } from 'react';
 import styles from './Carousel.module.css';
 
 const Carousel = ({ images }) => {
-  const [currentIndex, setCurrentIndex] = useState(0);
+  // const [currentIndex, setCurrentIndex] = useState(0);
 
-  // Cambiar imagen automáticamente cada 3 segundos
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentIndex((prevIndex) =>
-        prevIndex === images.length - 1 ? 0 : prevIndex + 1
-      );
-    }, 3000);
+  // // Cambiar imagen automáticamente cada 3 segundos
+  // useEffect(() => {
+  //   const interval = setInterval(() => {
+  //     setCurrentIndex((prevIndex) =>
+  //       prevIndex === images.length - 1 ? 0 : prevIndex + 1
+  //     );
+  //   }, 3000);
 
-    return () => clearInterval(interval); // Limpieza al desmontar
-  }, [images]);
+  //   return () => clearInterval(interval); // Limpieza al desmontar
+  // }, [images]);
 
   // Manejar clic en los puntos
-  const goToSlide = (index) => {
-    setCurrentIndex(index);
-  };
+  // const goToSlide = (index) => {
+  //   setCurrentIndex(index);
+  // };
 
   return (
     <div className={styles.Carousel}>
-      <div
+      <img src="images/inicio_hero.jpg" alt="" />
+      {/* <div
         className={styles.carouselInner}
         style={{ transform: `translateX(-${currentIndex * 100}%)` }}
       >
@@ -40,7 +41,7 @@ const Carousel = ({ images }) => {
             onClick={() => goToSlide(index)}
           ></span>
         ))}
-      </div> */}
+      </div> */} 
     </div>
   );
 };

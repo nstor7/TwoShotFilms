@@ -1,16 +1,14 @@
 import Trabajos from '../DB/trabajos.js';
-import PortfolioItem from '../components/portfolioItem.jsx';
+import PortfolioItem from '../components/card.jsx';
 import styles from './portfolioPage.module.css';
 import Carousel from '../components/carousel.jsx';
-
+import Card from '../components/card.jsx'
 const PortfolioPage = () => {
-  var images =[]
-  Trabajos.map(Trabajo=>images.push(Trabajo.Thumnail))
   return (
     <main className={styles.portfolioPage}>
-      <Carousel images={images}/>
-      <section className='hero'>
-        <div className="hero-content ">
+      <section className={styles.hero} >
+        <img src="images/Instinto_Thumnail.jpg" alt="" className={styles.heroImagen} />
+        <div className={styles.heroContenido} >
           <h1>Portafolio</h1>
           <p>Nuestros trabajos más destacados</p>
         </div>
@@ -18,7 +16,10 @@ const PortfolioPage = () => {
       <section className={styles.portfolio}>
         <div className={styles.portfolioGrid}>
           {Trabajos.map((trabajo, index) => (
-            <PortfolioItem key={index} trabajo={trabajo} />
+            <Card vinculo={trabajo.vinculo} 
+            titulo={trabajo.Titulo} 
+            cuerpo={trabajo.SubTitulo} 
+            imagen={trabajo.Thumnail}/>
           ))}
         </div>
       </section>

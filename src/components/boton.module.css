@@ -1,0 +1,57 @@
+.btn {
+  display: inline-block;
+  padding: 0.8rem 1.5rem;
+  text-decoration: none;
+  border: none;
+  border-radius: 0;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  font-family: Parrafo;
+  letter-spacing: 0.1rem;
+}
+.btnNegativo {
+  display: inline-block;
+  padding: 0.8rem 1.5rem;
+  text-decoration: none;
+  border: none;
+  border-radius: 0;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  font-family: Parrafo;
+  letter-spacing: 0.1rem;
+  background: var(--gradiente-azul);
+  color: var(--blanco-texto);
+}
+.btnPositivo {
+  background: var(--gradiente-azul);
+  color: var(--blanco-texto);
+  display: inline-block;
+  padding: 0.8rem 1.5rem;
+  text-decoration: none;
+  border: none;
+  border-radius: 0;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  cursor: pointer;
+  font-family: Parrafo;
+  letter-spacing: 0.1rem;
+}
+.btnNegativo:hover {
+  background:var(--dorado-fondo) ;
+  color: var(--dorado-texto);
+}
+
+.btn-outline {
+  background: transparent;
+  color: var(--primary-text);
+  border: 1px solid var(--primary-text);
+}
+
+.btn-outline:hover {
+  background: var(--primary-text);
+  color: #fff;
+}
