@@ -50,6 +50,9 @@
   --dorado-texto:#968F83;
   --gradiente-azul: linear-gradient(#0f151e ,#1a2435 );
 }
+body{
+  background: none;
+}
   /* 
   --gradiente-positiva:linear-gradient(#32b8b1, #28948f);
   --fondo-negativo: #0f151e;
