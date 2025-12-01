@@ -1,7 +1,6 @@
 import Trabajos from '../DB/trabajos.js';
 import PortfolioItem from '../components/card.jsx';
 import styles from './portfolioPage.module.css';
-import Carousel from '../components/carousel.jsx';
 import Card from '../components/card.jsx'
 const PortfolioPage = () => {
   return (

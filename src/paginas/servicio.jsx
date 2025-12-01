@@ -3,7 +3,6 @@ import { Servicios } from '../DB/servicios.js';
 import style from './servicio.module.css';
 import PortfolioItem from '../components/card.jsx';
 import Trabajos from '../DB/trabajos.js';
-import Carousel from '../components/carousel.jsx';
 import boton from '../components/boton.jsx';
 import Boton from '../components/boton.jsx';
 

@@ -1,4 +1,3 @@
-import Carousel from '../components/carousel'
 import {useParams, Link} from 'react-router'
 import { Servicios, serviciosCategorias} from '../DB/servicios'
 import Trabajos from '../DB/trabajos'
