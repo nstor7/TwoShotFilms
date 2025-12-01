@@ -1,11 +1,7 @@
 @keyframes paralax {
-  from {object-position: 50% -400%;}
+  from {object-position: 50% 0%;}
   to {object-position: 50% 400%;} 
  }
- @keyframes paneo {
-  from {object-position: 10% 50%; }
-  to {object-position: 100% 50% ;}
-}
 .hero{
   width: 100vw;
   display: grid;
@@ -47,26 +43,4 @@
   font-family: SubTitulo;
   text-align: center;
   font-size: 1.5rem;
-}
-
-.portfolio{
-  width: 100%;
-  background: var(--gris-fondo);
-}
-
-.portfolioGrid {
-  padding: 2rem 1rem;
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 1.5rem;
-  max-width: 1200px;
-  margin: 0 auto;
-  background: var(--fondo-negativo);
-  color: var(--titulo-negativo);
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-  align-items: space-evenly;
-  justify-items: center;
-}
-.portfolioItem{
-  background: var(--fondo-negativo-secundario);
 }

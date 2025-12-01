@@ -1,9 +1,9 @@
 import { Link, useParams } from 'react-router'
 import { Servicios } from '../DB/servicios.js';
 import style from './servicio.module.css';
+import hero from '../components/hero.module.css'
 import PortfolioItem from '../components/card.jsx';
 import Trabajos from '../DB/trabajos.js';
-import boton from '../components/boton.jsx';
 import Boton from '../components/boton.jsx';
 
 
@@ -17,9 +17,9 @@ const Servicio = () => {
   return (
     <>
         <div key={Service.id} className={style.serviceSection}>
-          <section className={style.hero}>
-            <img src={Service.hero} className={style.heroImage} alt="" />
-            <div className={style.heroContent}>
+          <section className={hero.hero}>
+            <img src={Service.hero} className={hero.heroImagen} alt="" />
+            <div className={hero.heroContenido}>
               <h1>{Service.nombre}</h1>
               <p>{Service.subtitulo}</p>
               <Boton key= 'key' link= '#contacto' clase='btnPositivo' texto='Reserva tu Fecha' />

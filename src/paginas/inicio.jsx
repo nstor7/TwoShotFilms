@@ -3,6 +3,7 @@ import {Servicios} from '../DB/servicios.js'; // Array de servicios
 import Trabajos from '../DB/trabajos.js'; // Array de trabajos
 // import ServiceForm from './ServiceForm'; // Formulario reutilizable
 import styles from './inicio.module.css';
+
 import SocialLinks from '../components/SocialLinks.jsx';
 import Card from '../components/card.jsx';
 import Boton from '../components/boton.jsx';
@@ -16,7 +17,7 @@ const Inicio = () => {
   const ServiciosImportantes= Servicios.slice(0,3)
   return (
     <main className={styles.homePage}>
-      <div className={styles.inicioHero}>
+      <div className={styles.hero}>
         <img src="images/inicio_hero.jpg" alt="" className={styles.heroImagen} />
         <div className={styles.heroContenido}>
           <h1>Two Shot Films</h1>

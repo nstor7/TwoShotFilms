@@ -1,13 +1,14 @@
 import Trabajos from '../DB/trabajos.js';
 import PortfolioItem from '../components/card.jsx';
 import styles from './portfolioPage.module.css';
+import hero from '../components/hero.module.css'
 import Card from '../components/card.jsx'
 const PortfolioPage = () => {
   return (
     <main className={styles.portfolioPage}>
-      <section className={styles.hero} >
-        <img src="images/Instinto_Thumnail.jpg" alt="" className={styles.heroImagen} />
-        <div className={styles.heroContenido} >
+      <section className={hero.hero} >
+        <img src="images/Instinto_Thumnail.jpg" alt="" className={hero.heroImagen} />
+        <div className={hero.heroContenido } >
           <h1>Portafolio</h1>
           <p>Nuestros trabajos más destacados</p>
         </div>
