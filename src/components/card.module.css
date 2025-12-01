@@ -1,5 +1,6 @@
 .card{
-  display: grid;
+  display: flex;
+  flex-flow: row;
   text-decoration: none;
   background: var(--azul-fondo);
   align-items: start;
