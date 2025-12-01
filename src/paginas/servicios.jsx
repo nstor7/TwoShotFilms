@@ -1,6 +1,5 @@
 import { Servicios } from '../DB/servicios.js';
 import style from './servicios.module.css';
-import Carousel from '../components/carousel.jsx';
 import Trabajos from '../DB/trabajos.js';
 import Card from '../components/card.jsx'
 import boton from '../components/boton.jsx';
