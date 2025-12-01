@@ -1,7 +1,7 @@
 .footer {
   padding: 1.5rem;
-  background: var(--fondo-negativo);
-  color: #fff;
+  background: var(--azul-fondo);
+  color: var(--azul-texto);
   text-align: center;
 }
 
@@ -15,7 +15,7 @@
 }
 
 .footerLink {
-  color: #fff;
+  color: var(--azul-texto);
   text-decoration: none;
   margin: 0 0.5rem;
   transition: color 0.3s;

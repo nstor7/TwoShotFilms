@@ -1,15 +1,16 @@
 import { Link, useParams } from 'react-router'
 import { Servicios } from '../DB/servicios.js';
 import style from './servicio.module.css';
-import PortfolioItem from '../components/portfolioItem.jsx';
+import PortfolioItem from '../components/card.jsx';
 import Trabajos from '../DB/trabajos.js';
 import Carousel from '../components/carousel.jsx';
+import boton from '../components/boton.jsx';
+import Boton from '../components/boton.jsx';
 
 
 const Servicio = () => {
     const { id } = useParams()
     const Service = Servicios.find(Servicio => Servicio.id === id)
-    console.log(Service.Genero)
     const featuredWorks = Trabajos.filter(Trabajo => Trabajo.Genero === Service.Genero).slice(0, 3)
     var images = []
     featuredWorks.map(Trabajo => images.push(Trabajo.Thumnail))
@@ -17,42 +18,82 @@ const Servicio = () => {
   return (
     <>
         <div key={Service.id} className={style.serviceSection}>
-          <Carousel images={images}/>
-          <section className="hero">
-            <div className="hero-content">
-              <h1>{Service.h1}</h1>
+          <section className={style.hero}>
+            <img src={Service.hero} className={style.heroImage} alt="" />
+            <div className={style.heroContent}>
+              <h1>{Service.nombre}</h1>
               <p>{Service.subtitulo}</p>
-              <a href="#contacto" className="btn  btnNegativo">Reserva tu Fecha</a>
+              <Boton key= 'key' link= '#contacto' clase='btnPositivo' texto='Reserva tu Fecha' />
+              {/* <a href="#contacto" className="btn  btnNegativo">Reserva tu Fecha</a> */}
             </div>
           </section>
+          <div className={style.servicioDescripcion} >
+            <p>{Service.descripcion}</p>
+          </div>
+          <section className={style.ventajas}>
+            <h2 className={style.ventajasTitulo} >¿Por Qué Elegirnos?</h2>
 
-          <section className={style.benefits}>
-            <h2>¿Por Qué Elegirnos?</h2>
-            <div className={style.benefitsContainer}>
-              {Service.porQueElegirnos.map((beneficio, index) => (
-                <div key={index} className={style.benefitItem}>
-                  <h3>{beneficio.titulo}</h3>
-                  <p>{beneficio.descripcion}</p>
-                </div>
+              {Service.ventajas.map((ventaja, index) => (
+              <>
+                <img src={ventaja.imagen} className={style.ventajaImagen} alt="" />
+                <div key={index} className={style.ventajaContenido}>
+                  <h3>{ventaja.titulo}</h3>
+                  <p>{ventaja.descripcion}</p>
+                  <p><i>{ventaja.inspiracional} </i></p>
+                </div>  
+              </>
+                
               ))}
-            </div>
           </section>
 
-          <section className={style.packages}>
+          <section className={style.paquetes}>
             <h2>Nuestros Paquetes</h2>
-            <div className={style.packagesContainer}>
               {Service.paquetes.map((paquete, index) => (
-                <div key={index} className={style.packageCard}>
-                  <h3>{paquete.nombre} - Desde ${paquete.precio}</h3>
-                  <ul>
-                    {paquete.detalles.map((detalle, i) => (
-                      <li key={i}>{detalle}</li>
+                <div key={index} className={style.paquete}>
+                  <div className={style.paqueteCabeza}>
+                    <img src={paquete.imagen} className={style.paqueteCabezaImagen} alt="" />
+                    <div className={style.paqueteCabezaInfo}>
+                      <h3>{paquete.nombre}</h3>
+                      <p>{paquete.subtitulo} </p>
+                    </div>
+                  </div>
+                  <div className={style.paqueteCuerpo}>
+                    <div className={style.paqueteCuerpoObjetivo}>
+                      <h3>Lograrás</h3>
+                      <ul>
+                        {paquete.objetivos.map((objetivo, i) => (
+                          <li key={i}>{objetivo}</li>
+                        ))}
+                      </ul>
+                      
+                    </div>
+                    <div className={style.paqueteCuerpoIncluye}>
+                      <h3>Plan Básico Incluye</h3>
+                      <ul>
+                        {paquete.incluye.map((spec, i) => (
+                      <li key={i}>{spec}</li>
                     ))}
-                  </ul>
-                  <Link href="#contacto" className="btn btnPositivo">Cotiza Ahora</Link>
+                      </ul>
+                    </div>
+                    <div className={style.paqueteCuerpoNoIncluye} >
+                      <h3>Adicionales</h3>
+                      <ul>
+                          {paquete.noIncluye.map((contra, i) => (
+                          <li key={i}>{contra}</li>
+                        ))}
+                      </ul>
+                    </div>
+                  </div>  
+                    
+                  
+                  <div className={style.paquetePie}>
+                    <p>Costo entre:</p>
+                    <p>{paquete.precio.minimo} y ${paquete.precio.maximo}</p>
+                    <Boton link='#contacto' texto='Cotiza Ahora' />
+                  </div>
                 </div>
               ))}
-            </div>
+
           </section>
 
           {/* <section className={style.portfolio}>
@@ -94,7 +135,7 @@ const Servicio = () => {
             <a href="#" className="btn btnNegativo">{Service.upsell.cta}</a>
           </section> */}
 
-          <section id="contacto" className={style.contact}>
+          {/* <section id="contacto" className={style.contact}>
             <h2>Contáctanos Hoy</h2>
             <form>
               <input type="text" placeholder="Nombre" required />
@@ -110,7 +151,7 @@ const Servicio = () => {
               <button type="submit" className="btn">Enviar Cotización</button>
             </form>
             <p>O escríbenos al <a href="https://wa.me/50712345678">WhatsApp</a></p>
-          </section>
+          </section> */}
         </div>
     </>
   );

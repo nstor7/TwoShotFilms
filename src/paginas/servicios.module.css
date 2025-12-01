@@ -1,52 +1,70 @@
+@keyframes paralax {
+  from {object-position: 50% 0%;}
+  to {object-position: 50% 400%;} 
+ }
+.hero{
+  width: 100vw;
+  display: grid;
+  grid-template-rows: repeat(2,1fr);
+  grid-template-columns: 1fr ;
+  height: 40vw;
+}
+.heroImagen{
+  overflow: hidden;
+  object-fit: cover;
+  inline-size: 100%;
+  block-size: 100%;
+  grid-area: 1 / 1 / span 1 / span 2;
+  position: fixed;
+  z-index: -2;
+  animation: paralax linear;
+  animation-timeline: view();
+}
+.heroContenido{
+  grid-area: 2 / 1;
+  max-width: 1000px;
+  justify-self: center;
+  align-self: center;
+  display: grid;
+  gap: 10px;
+
+}
+
+.heroContenido h1{
+  text-transform: uppercase;
+  color: var(--blanco-texto);
+  font-size: 2rem;
+  font-family: Titulo3;
+  text-align: center;
+}
+.heroContenido p{
+  color: var(--blanco-texto);
+  padding-bottom: 3vw;
+  font-family: SubTitulo;
+  text-align: center;
+  font-size: 1.5rem;
+}
+
 .servicesList {
   padding: 2rem 1rem;
   text-align: center;
-  background: var(--fondo-negativo);
+  background: var(--gris-fondo);
 }
 
 .servicesList h2 {
   font-size: 1.8rem;
-  font-weight: 400;
   text-transform: uppercase;
   margin-bottom: 2rem;
-  color: var(--titulo-negativo);
+  color: var(--blanco-texto);
+  font-family: Titulo3;
 }
 
 .servicesContainer {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+
   gap: 2rem;
 }
-
-.serviceCard {
-  padding: 1.5rem;
-  background: #fff;
-  border: 1px solid #e5e5e5;
-  text-align: left;
-  background: var(--fondo-negativo-secundario);
-}
-
-.serviceCard h3 {
-  font-size: 1.2rem;
-  font-weight: 400;
-  text-transform: uppercase;
-  margin-bottom: 0.5rem;
-  color: var(--titulo-negativo);
-}
-
-.serviceCard p {
-  font-size: 0.9rem;
-  font-weight: 300;
-  margin-bottom: 1rem;
-  color: var(--titulo-negativo);
-}
-
-.serviceCard .price {
-  font-family: Parrafo;
-  font-size: 0.9rem;
-  color: var(--titulo-negativo-secundario);
-}
-
 /* Contacto */
 .contact {
   padding: 2rem 1rem;

@@ -4,50 +4,56 @@ import Trabajos from '../DB/trabajos.js'; // Array de trabajos
 // import ServiceForm from './ServiceForm'; // Formulario reutilizable
 import styles from './inicio.module.css';
 import SocialLinks from '../components/SocialLinks.jsx';
-import PortfolioItem from '../components/portfolioItem.jsx';
-import Carousel from '../components/carousel.jsx';
+import Card from '../components/card.jsx';
+import Boton from '../components/boton.jsx';
+
 
 const Inicio = () => {
   // Seleccionamos algunos trabajos destacados (ej. los primeros 3)
   const featuredWorks = Trabajos.slice(0, 3);
   var images= []
   Trabajos.map(Trabajo => images.push(Trabajo.Thumnail))
-
+  const ServiciosImportantes= Servicios.slice(0,3)
   return (
     <main className={styles.homePage}>
-      <Carousel images ={images} />
-      {/* Hero Section */}
-      <section className={`hero ${styles.hero}`}>
-        
-        <div className="hero-content">
+      <div className={styles.inicioHero}>
+        <img src="images/inicio_hero.jpg" alt="" className={styles.heroImagen} />
+        <div className={styles.heroContenido}>
           <h1>Two Shot Films</h1>
           <p className='SubTitulo'>Transformamos tus ideas en historias cinematográficas</p>
-          <Link to="/#contacto" className='btn btnNegativo'>Cotiza tu Video</Link>
+          <Boton  texto='Cotiza tu Video' link="/#contacto" clase="btnPositivo" />
         </div>
-      </section>
+      </div>
 
-      {/* Servicios */}
       <section className={styles.servicesSection}>
         <h2>Nuestros Servicios</h2>
         <div className={styles.servicesGrid}>
-          {Servicios.map(servicio => (
-            <Link
-              key={servicio.id}
-              to={`servicios/${servicio.id}`}
-              className={`${styles.serviceCard} card`}
-            >
-              <h3>{servicio.h1.split(" en Panamá")[0]}</h3>
-              <p>{servicio.subtitulo}</p>
-            </Link>
+          {ServiciosImportantes.map(servicio => (
+            <Card 
+            key={servicio.id} 
+            imagen={servicio.hero} 
+            vinculo={'/servicios/'+servicio.id} 
+            titulo={servicio.nombre} 
+            cuerpo={servicio.subtitulo}  />
+            // <Link
+            //   key={servicio.id}
+            //   to={`servicios/${servicio.id}`}
+            //   className={`${styles.serviceCard} card`}
+            // >
+            //   <img src={servicio.hero} className={styles.serviceImagen} alt="" />
+
+            //   <h3>{servicio.nombre.split(" en Panamá")[0]}</h3>
+            //   <p>{servicio.subtitulo}</p>
+            // </Link>
           ))}
         </div>
-        <Link to="/servicios" className="btn btnPositivo">Ver Todos los Servicios</Link>
+        <Boton link="#/servicios" texto='Ver Todos los Servicios' />
       </section>
       <div className={styles.descripcion}>
                 <h2>Producción Audiovisual en Panamá</h2>
                 <p>Somos una empresa de producción audiovisual especializada en transformar la identidad de tu marca a través del poder de la cinematografía.</p>
 
-<p> En nuestra productora audiovisual, nos dedicamos a crear contenidos visuales que destacan por su calidad cinematográfica y narrativa impactante. Trabajamos principalmente con:</p>
+<p> En nuestra productora audiovisual nos dedicamos a crear contenidos visuales que destacan por su calidad cinematográfica y narrativa impactante. Trabajamos principalmente con:</p>
 <ul>
   <li>Empresas que buscan elevar su imagen corporativa</li>
   <li>Fundaciones que necesitan comunicar su propósito de manera emotiva</li>
@@ -62,17 +68,21 @@ La diferencia está en nuestro enfoque: convertimos tu mensaje en una experienci
         <h2>Trabajos Destacados</h2>
         <div className={styles.portfolioGrid}>
           {featuredWorks.map((trabajo, index) => (
-            <PortfolioItem key={index} trabajo={trabajo} />
+            <Card key={index} imagen={trabajo.Thumnail} vinculo={ 'vyvuctytr7ybh7rugty8huyyu6hut8yu6bvtvgytysgntyfnhggbhbhbguhthgrttyt/portfolio/' + trabajo.vinculo} titulo={trabajo.Titulo} cuerpo={trabajo.SubTitulo}  />
           ))}
         </div>
-        <Link to="/portfolio" className="btn btnPositivo">Explora Nuestro Portafolio</Link>
+        <Boton
+        link="/portfolio"
+          texto="Ver Todos los Trabajos"
+        />
+        {/* <Link to="/portfolio" className="btn btnPositivo">Explora Nuestro Portafolio</Link> */}
       </section>
 
       {/* Formulario de Contacto */}
-      <section className={styles.contactSection}>
-        <h2>Contáctanos</h2>
+      {/* <section className={styles.contactSection}>
+        <h2>Contáctanos</h2> */}
         {/* <ServiceForm /> */}
-      </section>
+      {/* </section> */}
     </main>
   );
 };

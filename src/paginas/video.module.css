@@ -1,0 +1,115 @@
+.proyecto{
+    padding: 10vw;
+    width: 100vw;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    height: 50vw;
+    background: var(--gris-fondo);
+}
+.proyectoPlayer{
+    display: grid;
+}
+
+.proyectoPlayerCover{
+    grid-area: 1/1;
+    height: 100%;
+    width: 100%;
+    z-index: 1;
+    background: var(--azul-fondo);
+    opacity: 0.4;
+    padding: 10vw 15vw;
+}
+.proyectoPlayerCover :nth-child(1){
+    font-size: 10vw;
+    color: var(--azul-texto);
+    
+}
+.proyectoPlayerCover :nth-child(1) :hover{
+    color: var(--blanco-texto);
+}
+.proyectoPlayerImagen{
+    object-fit: cover;
+    inline-size: 100%;
+    overflow: hidden;
+    block-size: 100%;
+    grid-area: 1/1;
+    z-index: 0
+}
+.proyectoInfo{
+    display: flex;
+    flex-direction: column;
+    background: var(--dorado-fondo);
+    color: var(--dorado-texto);
+    padding: 6vw;
+}
+.proyectoInfo h1{
+    font-family: Titulo3;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+    justify-self: center;
+    text-align: center;
+    line-height: 1rem;
+}
+.proyectoInfo p{
+    font-family: Parrafo;
+    font-size: 1rem;
+    letter-spacing: 0.1rem;
+    line-height: 1.5rem;
+    text-align: center;
+}
+
+.proyectoInfo aside{
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    margin-bottom: 2rem;
+}
+.proyectoInfo aside p{
+    font-size: 0.8rem;
+    font-family: Titulo3;
+    opacity: 0.5;
+    
+}
+.proyectoInfoSub{
+    font-family: SubTitulo;
+    opacity: 0.5;
+    line-height: 0.9rem;
+}
+.proyectoInfoSub i{
+    font-size: 0.9rem;
+    
+}
+.proyectoVideo {
+    position: fixed;
+    width: 0vw;
+    height: 0vw;
+    top: 3vw;
+    z-index: -1;
+
+}
+.proyectoVideoActivo{
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    z-index: 5;
+    background: rgba(1,1,1,0.8);
+    color: white;
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    grid-template-rows: 20vh 80vh;
+}
+.proyectoVideoActivo p{
+    align-self: end;
+    padding: 1vw;
+    background: var(--azul-fondo);
+}
+.proyectoVideoActivo iframe{
+    width: 64vw;
+    height: 36vw;
+    align-items: start;
+}
+
