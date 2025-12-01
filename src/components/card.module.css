@@ -1,6 +1,6 @@
 .card{
   display: flex;
-  flex-flow: row;
+  flex-flow: column;
   text-decoration: none;
   background: var(--azul-fondo);
   align-items: start;
