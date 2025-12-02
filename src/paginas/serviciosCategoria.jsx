@@ -1,5 +1,5 @@
 import {useParams, Link} from 'react-router'
-import { Servicios, serviciosCategorias} from '../DB/servicios'
+import { serviciosCategorias} from '../DB/servicios'
 import Trabajos from '../DB/trabajos'
 
 const Categoria =  ()=>{

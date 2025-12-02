@@ -1,9 +1,7 @@
 import {Routes, Route, Router} from 'react-router'
 import Inicio from './paginas/inicio.jsx'
-import Landing from './paginas/landing.jsx'
 import ServiciosPagina from './paginas/servicios.jsx'
 import PortfolioPage from './paginas/portfolioPage.jsx'
-import Categoria from './paginas/serviciosCategoria.jsx'
 import Servicio from './paginas/servicio.jsx'
 import Video from './paginas/video.jsx'
 

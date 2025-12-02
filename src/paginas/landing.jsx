@@ -3,7 +3,7 @@ import { Link, useParams } from 'react-router'
 import style from './landing.module.css'
 
 const Landing = ()=>{
-    // const { id } = useParams()
+
     return(
         <main className={style.containter}>
             <section className={style.specs}>

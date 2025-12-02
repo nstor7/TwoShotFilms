@@ -1,16 +1,12 @@
 import { Link } from 'react-router-dom';
 import {Servicios} from '../DB/servicios.js'; // Array de servicios
 import Trabajos from '../DB/trabajos.js'; // Array de trabajos
-// import ServiceForm from './ServiceForm'; // Formulario reutilizable
 import styles from './inicio.module.css';
-
-import SocialLinks from '../components/SocialLinks.jsx';
 import Card from '../components/card.jsx';
 import Boton from '../components/boton.jsx';
 
 
 const Inicio = () => {
-  // Seleccionamos algunos trabajos destacados (ej. los primeros 3)
   const featuredWorks = Trabajos.slice(0, 3);
   var images= []
   Trabajos.map(Trabajo => images.push(Trabajo.Thumnail))
@@ -36,16 +32,6 @@ const Inicio = () => {
             vinculo={'/servicios/'+servicio.id} 
             titulo={servicio.nombre} 
             cuerpo={servicio.subtitulo}  />
-            // <Link
-            //   key={servicio.id}
-            //   to={`servicios/${servicio.id}`}
-            //   className={`${styles.serviceCard} card`}
-            // >
-            //   <img src={servicio.hero} className={styles.serviceImagen} alt="" />
-
-            //   <h3>{servicio.nombre.split(" en Panamá")[0]}</h3>
-            //   <p>{servicio.subtitulo}</p>
-            // </Link>
           ))}
         </div>
         <Boton link="#/servicios" texto='Ver Todos los Servicios' />
@@ -76,14 +62,7 @@ La diferencia está en nuestro enfoque: convertimos tu mensaje en una experienci
         link="/portfolio"
           texto="Ver Todos los Trabajos"
         />
-        {/* <Link to="/portfolio" className="btn btnPositivo">Explora Nuestro Portafolio</Link> */}
       </section>
-
-      {/* Formulario de Contacto */}
-      {/* <section className={styles.contactSection}>
-        <h2>Contáctanos</h2> */}
-        {/* <ServiceForm /> */}
-      {/* </section> */}
     </main>
   );
 };

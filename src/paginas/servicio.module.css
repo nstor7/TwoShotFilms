@@ -1,13 +1,58 @@
 
 @keyframes paralax {
-  from {object-position: 50% -400%;}
-  to {object-position: 50% 400%;} 
+  from {object-position: 50% 0;}
+  to {object-position: 50% 100%;} 
  }
  @keyframes paneo {
   from {object-position: 10% 50%; }
   to {object-position: 100% 50% ;}
 }
 /* Beneficios */
+.hero{
+  width: 100vw;
+  display: grid;
+  grid-template-rows: repeat(2,1fr);
+  grid-template-columns: 1fr ;
+  height: 40vw;
+}
+.heroImagen{
+  overflow: hidden;
+  object-fit: cover;
+  inline-size: 100%;
+  block-size: 100%;
+  grid-column:1/3;
+  grid-row: 1/3; 
+  z-index: -2;
+
+  animation: paralax linear;
+  animation-timeline: view();
+
+}
+.heroContenido{
+  grid-area: 2 / 1;
+  max-width: 1000px;
+  justify-self: center;
+  align-self: center;
+  display: grid;
+  gap: 10px;
+  align-item: center;
+  justify-items: center;
+}
+
+.heroContenido h1{
+  text-transform: uppercase;
+  color: var(--blanco-texto);
+  font-size: 2rem;
+  font-family: Titulo3;
+  text-align: center;
+}
+.heroContenido p{
+  color: var(--blanco-texto);
+  padding-bottom: 3vw;
+  font-family: SubTitulo;
+  text-align: center;
+  font-size: 1.5rem;
+}
 .servicioDescripcion{
   width: 100vw;
   padding: 4vw 29vw;
@@ -23,20 +68,24 @@
   letter-spacing: 0.1rem;
 }
 .ventajas {
+  display: flex;
+  flex-flow: column;
   padding: 0  10vw;
-  display: grid;
-  grid-template-columns: repeat(2 , 40vw);
-  grid-template-rows: 10vw 30vw 30vw 30vw ;
   background-color: var(--gris-fondo);
 }
 .ventajasTitulo {
-  grid-column: 1 / 3;
+  padding: 10vw;
   align-self: center;
   justify-self: center;
   font-size: 3rem;
   text-transform: uppercase;
-  color: var(--blanco-texto);
+  color: var(--gris-texto);
   font-family: Titulo3;
+}
+.ventajasCuerpo{
+  display: grid;
+  grid-template-columns: repeat(auto-fit , minmax(400px,1fr));
+  color: var(--azul-texto);
 }
 .ventajaImagen{
 
@@ -47,18 +96,27 @@
   animation: paneo linear;
   animation-timeline: view();
 }
-
-.ventajas :nth-child(4){
-  grid-column: 2 / 3;
+.ventajasCuerpo :nth-child(1){
+  order: 1;
 }
-.ventajas :nth-child(5){
-  grid-row: 3 / 4;
+.ventajasCuerpo :nth-child(2){
+  order: 2;
+}
+.ventajasCuerpo :nth-child(3){
+  order: 4;
+}
+.ventajas :nth-child(4){
+  order: 3;
   background-color: var(--dorado-fondo);
   color: var(--dorado-texto);
 }
+.ventajasCuerpo :nth-child(5){
+  order: 5;
+}
+.ventajasCuerpo :nth-child(6){
+  order: 6;
+}
 .ventajaContenido{
-  width: 40vw;
-  height: 30vw;
   display: grid;
   background: var(--azul-fondo);
   gap: 1vw;
@@ -95,6 +153,8 @@
   text-align: center;
   background: #101214;
   color:  var(--blanco-texto);
+  display: flex;
+  flex-flow: column;
 }
 
 .paquetes h2 {
@@ -104,13 +164,11 @@
   font-family: Titulo3;
   padding: 5vw; 
   font-size: 3rem;
+  color: var(--gris-texto);
 }
-
-
-
-.paquete {
-  background: #101214;
-  display: grid;
+.paquete{
+  display: flex;
+  flex-flow: column;
 }
 @keyframes paralaxMedianeras{
   from {object-position: 50% 0%;
@@ -152,9 +210,8 @@
   align-self: start;
 }
 .paqueteCuerpo{
-  position: relative;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   width: 60vw;
   padding: 2vw;
   margin: auto;
@@ -218,90 +275,16 @@
 .paquetePie :last-child {
   justify-self: center;
 }
-/* Portfolio (Muestras)
-.portfolio {
-  padding: 2rem 1rem;
-  text-align: center;
-  background: var(--azul-fondo);
-}
 
-.portfolio h2 {
-  font-size: 1.8rem;
-  font-weight: 400;
-  text-transform: uppercase;
-  margin-bottom: 2rem;
-  color: var(--titulo-positivo);
-}
-
-.portfolioContainer {
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
-}
-
-.portfolioItem video, .portfolioItem img {
-  width: 100%;
-  border: 1px solid #e5e5e5;
-}
-
-.portfolioItem p {
-  font-size: 0.9rem;
-  font-weight: 300;
-  color: var(--titulo-negativo-secundario);
-  margin-top: 0.5rem;
-}
-
-/* Testimonios */
-/*.testimonials {
-  padding: 2rem 1rem;
-  text-align: center;
-  background: var(--fondo-negativo);
-}
-
-.testimonials h2 {
-  color: var(--titulo-negativo);
-  font-size: 1.8rem;
-  text-transform: uppercase;
-  margin-bottom: 2rem;
-}
-
-.testimonials-container {
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
-
-  
-}
-
-.testimonialItem {
-  padding: 1.5rem;
-  background: var(--fondo-negativo-secundario);
-  border: 1px solid var(--titulo-negativo-secundario);
-}
-
-.testimonialItem p {
-  font-size: 0.9rem;
-  font-weight: 300;
-  color: var(--titulo-negativo);
-}
-
-.testimonialItem h4 {
-  font-size: 1rem;
-  font-weight: 400;
-  margin-top: 1rem;
-  color: var(--titulo-negativo-secundario)
-} */
-
-/* Proceso */
 .process {
-  padding: 2rem 1rem;
+  padding: 4rem 2rem;
   text-align: center;
   background: var(--azul-fondo);
   color: var(--azul-texto);
 }
 
 .process h2 {
-  font-size: 1.8rem;
+  font-size: 2.5rem;
   text-transform: uppercase;
   margin-bottom: 2rem;
   font-family: Titulo3;
@@ -314,183 +297,51 @@
 }
 
 .processItem h3 {
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   text-transform: uppercase;
   margin-top: 2rem;
   font-family: Titulo3;
 }
 
 .processItem p {
-  font-size: 0.9rem;
-  font-weight: 300;
-  color: var(--titulo-negativo-secundario);
-  font-family: SubTitulo;
-  font-size: 4rem;
-}
-
-/* Upsell */
-.upsell {
-  padding: 2rem 1rem;
-  text-align: center;
-}
-
-.upsell h2 {
-  font-size: 1.8rem;
-  font-weight: 400;
-  text-transform: uppercase;
-  margin-bottom: 1rem;
-}
-
-.upsell p {
   font-size: 1rem;
   font-weight: 300;
-  margin-bottom: 1.5rem;
+  font-family: SubTitulo;
 }
-
-/* Contacto */
-.contact {
-  padding: 2rem 1rem;
-  text-align: center;
-  background: var(--fondo-gris);
-}
-
-.contact h2 {
-  font-size: 1.8rem;
-  text-transform: uppercase;
-  margin-bottom: 1.5rem;
-}
-
-
-
-/* Media Queries para pantallas más grandes */
-@media (min-width: 768px) {
-
-  /* Beneficios */
-  .benefits {
-      padding: 4rem 2rem;
+@media(max-width:700px){
+  .hero{
+    height: 80vh;
+    grid-template-columns: repeat(2, 1fr);
   }
-
-  .benefits h2 {
-      font-size: 2.5rem;
+  .heroImagen{
+    grid-column: 1 / 3;
+    grid-row: 1/3 
   }
-
-  .benefitsContainer {
-      flex-direction: row;
-      max-width: 1200px;
-      margin: 0 auto;
+  .heroContenido{
+    grid-column: 1 / 3;
+    grid-row: 2/3;
   }
-
-  .benefitItem h3 {
-      font-size: 1.5rem;
+  .servicioDescripcion{
+    padding: 8vw 5vw;
   }
-
-  .benefitItem p {
-      font-size: 1rem;
+  .ventajasTitulo{
+    font-size: 1.5rem;
   }
-
-  /* Paquetes */
-  .packages {
-      padding: 4rem 2rem;
+  .ventajasCuerpo :nth-child(3){
+    order: 3;
   }
-
-  .packages h2 {
-      font-size: 2.5rem;
+  .ventajasCuerpo :nth-child(4){
+    order: 4;
   }
+  .paquetes h2 {
+    font-size: 1.5rem;
+    padding: 10vw auto;
 
-  .packagesContainer {
-      flex-direction: row;
-      max-width: 1200px;
-      margin: 0 auto;
-  }
-
-  .packageCard h3 {
-      font-size: 1.5rem;
-  }
-
-  .packageCard ul {
-      font-size: 1rem;
-  }
-
-  /* Portfolio */
-  .portfolio {
-      padding: 4rem 2rem;
-  }
-
-  .portfolio h2 {
-      font-size: 2.5rem;
-  }
-
-  .portfolioContainer {
-      flex-direction: row;
-      max-width: 1200px;
-      margin: 0 auto;
-  }
-
-  /* Testimonios */
-  .testimonials {
-      padding: 4rem 2rem;
-  }
-
-  .testimonials h2 {
-      font-size: 2.5rem;
-  }
-
-  .testimonialsContainer {
-      flex-direction: row;
-      max-width: 1200px;
-      margin: 0 auto;
-  }
-
-  .testimonialItem p {
-      font-size: 1rem;
-  }
-
-  .testimonialItem h4 {
-      font-size: 1.1rem;
-  }
-
-  /* Proceso */
-  .process {
-      padding: 4rem 2rem;
-  }
-
-  .process h2 {
-      font-size: 2.5rem;
-  }
-
-  .processContainer {
-      flex-direction: row;
-      max-width: 1200px;
-      margin: 0 auto;
-  }
-
-  .processItem h3 {
-      font-size: 1.5rem;
-  }
-
-  .processItem p {
-      font-size: 1rem;
-  }
-
-  /* Upsell */
-  .upsell {
-      padding: 4rem 2rem;
-  }
-
-  .upsell h2 {
-      font-size: 2.5rem;
-  }
-
-  .upsell p {
-      font-size: 1.2rem;
-  }
-
-  /* Contacto */
-  .contact {
-      padding: 4rem 2rem;
-  }
-
-  .contact h2 {
-      font-size: 2.5rem;
+  } 
+  .paqueteCabeza{
+    height: 60vw;
+  } 
+  .paqueteCuerpo{
+    width: 80vw;
   }
 }

@@ -1,8 +1,6 @@
 import { Link, useParams } from 'react-router'
 import { Servicios } from '../DB/servicios.js';
 import style from './servicio.module.css';
-import hero from '../components/hero.module.css'
-import PortfolioItem from '../components/card.jsx';
 import Trabajos from '../DB/trabajos.js';
 import Boton from '../components/boton.jsx';
 
@@ -17,13 +15,12 @@ const Servicio = () => {
   return (
     <>
         <div key={Service.id} className={style.serviceSection}>
-          <section className={hero.hero}>
-            <img src={Service.hero} className={hero.heroImagen} alt="" />
-            <div className={hero.heroContenido}>
+          <section className={style.hero}>
+            <img src={Service.hero} className={style.heroImagen} alt="" />
+            <div className={style.heroContenido}>
               <h1>{Service.nombre}</h1>
               <p>{Service.subtitulo}</p>
               <Boton key= 'key' link= '#contacto' clase='btnPositivo' texto='Reserva tu Fecha' />
-              {/* <a href="#contacto" className="btn  btnNegativo">Reserva tu Fecha</a> */}
             </div>
           </section>
           <div className={style.servicioDescripcion} >
@@ -31,8 +28,8 @@ const Servicio = () => {
           </div>
           <section className={style.ventajas}>
             <h2 className={style.ventajasTitulo} >¿Por Qué Elegirnos?</h2>
-
-              {Service.ventajas.map((ventaja, index) => (
+            <div className={style.ventajasCuerpo} >
+               {Service.ventajas.map((ventaja, index) => (
               <>
                 <img src={ventaja.imagen} className={style.ventajaImagen} alt="" />
                 <div key={index} className={style.ventajaContenido}>
@@ -43,6 +40,9 @@ const Servicio = () => {
               </>
                 
               ))}
+            </div>
+
+             
           </section>
 
           <section className={style.paquetes}>
@@ -95,27 +95,6 @@ const Servicio = () => {
 
           </section>
 
-          {/* <section className={style.portfolio}>
-            <h2>Muestras de Nuestro Trabajo</h2>
-            <div className={style.portfolioContainer}>
-            {featuredWorks.map((trabajo, index) => (
-            <PortfolioItem key={index} trabajo={trabajo} />
-          ))}
-            </div>
-          </section> */}
-
-          {/* <section className={style.testimonials}>
-            <h2>Lo Que Dicen Nuestros Clientes</h2>
-            <div className={style.testimonialsContainer}>
-              {Service.testimonios.map((testimonio, index) => (
-                <div key={index} className={style.testimonialItem}>
-                  <p>"{testimonio.texto}"</p>
-                  <h4>– {testimonio.autor}</h4>
-                </div>
-              ))}
-            </div>
-          </section> */}
-
           <section className={style.process}>
             <h2>Nuestro Proceso es Simple</h2>
             <div className="process-container">
@@ -127,30 +106,6 @@ const Servicio = () => {
               ))}
             </div>
           </section>
-
-          {/* <section className={style.upsell}>
-            <h2>{Service.upsell.h2}</h2>
-            <p>{Service.upsell.texto}</p>
-            <a href="#" className="btn btnNegativo">{Service.upsell.cta}</a>
-          </section> */}
-
-          {/* <section id="contacto" className={style.contact}>
-            <h2>Contáctanos Hoy</h2>
-            <form>
-              <input type="text" placeholder="Nombre" required />
-              <input type="tel" placeholder="Teléfono" required />
-              <input type="date" placeholder="Fecha del Evento" required />
-              <select required>
-                <option value="">Tipo de Evento</option>
-                <option value="boda">Boda</option>
-                <option value="conferencia">Conferencia</option>
-                <option value="lanzamiento">Lanzamiento</option>
-                <option value="otro">Otro</option>
-              </select>
-              <button type="submit" className="btn">Enviar Cotización</button>
-            </form>
-            <p>O escríbenos al <a href="https://wa.me/50712345678">WhatsApp</a></p>
-          </section> */}
         </div>
     </>
   );

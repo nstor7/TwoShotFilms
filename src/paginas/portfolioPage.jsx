@@ -1,18 +1,15 @@
 import Trabajos from '../DB/trabajos.js';
-import PortfolioItem from '../components/card.jsx';
 import styles from './portfolioPage.module.css';
-import hero from '../components/hero.module.css'
+import Hero from '../components/hero.jsx';
 import Card from '../components/card.jsx'
 const PortfolioPage = () => {
   return (
-    <main className={styles.portfolioPage}>
-      <section className={hero.hero} >
-        <img src="images/Instinto_Thumnail.jpg" alt="" className={hero.heroImagen} />
-        <div className={hero.heroContenido } >
-          <h1>Portafolio</h1>
-          <p>Nuestros trabajos más destacados</p>
-        </div>
-      </section>
+    <>
+      <Hero 
+        Imagen = "images/Instinto_Thumnail.jpg"
+        Titulo = 'Portafolio'
+        SubTitulo= 'Nuestros trabajos más destacados'
+      />
       <section className={styles.portfolio}>
         <div className={styles.portfolioGrid}>
           {Trabajos.map((trabajo, index) => (
@@ -24,7 +21,7 @@ const PortfolioPage = () => {
         </div>
       </section>
       
-    </main>
+    </>
   );
 };
 

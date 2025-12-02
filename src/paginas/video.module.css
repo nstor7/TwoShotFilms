@@ -2,8 +2,7 @@
     padding: 10vw;
     width: 100vw;
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    height: 50vw;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
     background: var(--gris-fondo);
 }
 .proyectoPlayer{
@@ -17,8 +16,14 @@
     z-index: 1;
     background: var(--azul-fondo);
     opacity: 0.4;
-    padding: 10vw 15vw;
+    display: grid;
+
 }
+.proyectoPlayerCover :nth-child(1){
+    justify-self: center;
+    align-self: center;
+}
+
 .proyectoPlayerCover :nth-child(1){
     font-size: 10vw;
     color: var(--azul-texto);
