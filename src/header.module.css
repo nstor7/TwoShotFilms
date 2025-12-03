@@ -16,24 +16,31 @@
     color: var(--azul-texto);
   }
 }
+
 .header {
-  position: fixed;
-  width: 100%;
-  padding: 1rem;
-  z-index: 1000;
-
-}
-
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+    padding: 0.5rem 4rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+    animation: colorized linear;
+    height: 5vw;
+    animation-timeline: scroll(block);
+    animation-range: 0 300px;
+    background: var(--azul-fondo);
+  }
 .logo {
   height: auto;
-  width: 20vw;
+  width: 4vw;
 }
 
-.nav {
-  display: none;
-}
-
-.navList {
+.navList, .navListNone {
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  gap: 1rem;
+  justify-self: center;
   list-style: none;
 }
 
@@ -48,41 +55,71 @@
   animation-range:0  300px;
 }
 
-@media (min-width: 768px) {
-
-
+.navLink:hover {
+    color: #ccc;
+}
+.header :nth-child(3){
+  justify-self: right;
+}
+.bars{
+  display: none;
+}
+@media(max-width: 700px){
   .header {
-    padding: 0.5rem 4rem;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    align-items: center;
-    animation: colorized linear;
-    animation-timeline: scroll(block);
-    animation-range: 0 300px;
+    padding: 1rem;
     background: var(--azul-fondo);
+    display: flex;
+    flex-flow: column;
+    height: 30vw;
+    animation: none;
   }
-
   .logo {
-    width: 6vw;
+    width: 20vw;
     justify-self: start;
   }
-
-  .nav {
-      display: block;
-      
+  .navList{
+    height: 30vw;
+    display: grid;
+    grid-template-rows: repeta(3, 1fr);
+    grid-template-columns: 80vw;
+    gap: 0;
   }
 
-  .navList {
-      display: grid;
-      grid-template-columns: repeat(3, auto);
-      gap: 1rem;
-      justify-self: center;
+  .navLink{
+    display: block;
+    background: var(--azul-fondo);
+    height: 10vw;
+    width: 80vw;
+    text-align: center;
+    line-height: 10vw;
+    border: solid 1px var(--azul-texto);
+    color: var(--azul-texto);
   }
-
-  .navLink:hover {
-      color: #ccc;
+  .social{
+    height: 10vw;
+    width: 80vw;
+    background: var(--azul-fondo);
+    line-height: 10vw;
+    border: solid 1px var(--azul-texto);
   }
-  .header :nth-child(3){
-    justify-self: right;
+  .bars{
+    display: grid;
+    position: fixed;
+    right: 1rem;
+    bottom: 5rem;
+    width: 20vw;
+    height: 20vw;
+    background: var(--azul-fondo);
+    box-shadow: 2px 2px 2px var(--gris-fondo);
+    color: white;
+    border-radius: 50%;
+    justify-content: center;
+    align-items: center;
+  }
+  .navListNone {
+    display: none;
+  }
+  .socialNone{
+    display: none;
   }
 }

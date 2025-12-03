@@ -84,7 +84,7 @@
 }
 .ventajasCuerpo{
   display: grid;
-  grid-template-columns: repeat(auto-fit , minmax(300px,1fr));
+  grid-template-columns: repeat(auto-fit , minmax(600px,1fr));
   color: var(--azul-texto);
 }
 .ventajaImagen{
@@ -258,11 +258,11 @@
 .paquetePie{
   width: 40vw;
   margin: auto;
-  height: 15vw;
   display: grid;
   align-content: start;
   justify-content: center;
   gap: 1rem;
+  padding-bottom: 5vw;
 }
 .paquetePie p{
   font-family: SubTitulo;
@@ -326,6 +326,9 @@
   }
   .ventajasTitulo{
     font-size: 1.5rem;
+  }
+  .ventajasCuerpo{
+    grid-template-columns: repeat(1, minmax(200px, 1fr));
   }
   .ventajasCuerpo :nth-child(3){
     order: 3;
