@@ -20,13 +20,13 @@ const Header = () => {
       <div className={styles.logo}><img className={styles.logo} src="/images/Logo TwoShot.png" alt="" /></div>
       <nav className={styles.nav}>
         <ul className={classNameNav}>
-          <li><NavLink to="/" className={styles.navLink} >Inicio</NavLink></li>
-          <li><NavLink to="/servicios" className={styles.navLink} >Servicios</NavLink></li>
+          <li><NavLink onClick={mostrarMenu} to="/" className={styles.navLink} >Inicio</NavLink></li>
+          <li><NavLink onClick={mostrarMenu} to="/servicios" className={styles.navLink} >Servicios</NavLink></li>
           
-          <li><NavLink to="/portfolio" className={styles.navLink} >Portafolio</NavLink></li>
+          <li><NavLink onClick={mostrarMenu} to="/portfolio" className={styles.navLink} >Portafolio</NavLink></li>
         </ul>
       </nav>
-      <div className={classNameSocial} > <Social /></div>
+      <div className={classNameSocial} onClick={mostrarMenu} > <Social /></div>
      <div className={styles.bars} onClick={mostrarMenu}> <FaBars /> </div>
     </header>
   );
